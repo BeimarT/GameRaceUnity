@@ -99633,6 +99633,9 @@ GameObject:
   - component: {fileID: 1352701179}
   - component: {fileID: 1352701176}
   - component: {fileID: 1352701178}
+  - component: {fileID: 1352701180}
+  - component: {fileID: 1352701181}
+  - component: {fileID: 1352701182}
   m_Layer: 0
   m_Name: Square
   m_TagString: Untagged
@@ -99786,6 +99789,46 @@ MonoBehaviour:
   Vuelta: 0
   Tiempo: {fileID: 344620748}
   Vueltas: {fileID: 1540940793}
+--- !u!114 &1352701180
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1352701173}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 49b545040b7cf584a9a4d1aa4e9471bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  driftFactor: 0.95
+  accelerationFactor: 80
+  turnFactor: 3.5
+  maxSpeed: 140
+--- !u!114 &1352701181
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1352701173}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6b761ee2c4a54d4cb49a61011e80a4f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1352701182
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1352701173}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b517f65d9a294da4eae9248632ac3f47, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1370379772
 GameObject:
   m_ObjectHideFlags: 0
