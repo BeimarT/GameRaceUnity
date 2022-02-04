@@ -38,21 +38,27 @@ TagManager:
   - 
   - 
   m_SortingLayers:
-  - name: background
-    uniqueID: 4152899959
-    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: solo para puente
-    uniqueID: 2165863701
+  - name: background
+    uniqueID: 4152899959
+    locked: 0
+  - name: Background3_NoHitbox
+    uniqueID: 2219037475
+    locked: 0
+  - name: background2_NoHitbox
+    uniqueID: 1226172227
+    locked: 0
+  - name: Background2_Hitbox
+    uniqueID: 775701697
     locked: 0
   - name: player
     uniqueID: 390116473
     locked: 0
-  - name: "se\xF1ales etc"
-    uniqueID: 1226172227
+  - name: BackgroundFake
+    uniqueID: 1031701093
     locked: 0
-  - name: Arboles
-    uniqueID: 775701697
+  - name: Contador
+    uniqueID: 749554095
     locked: 0

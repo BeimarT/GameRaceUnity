@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class ContadorVueltas: MonoBehaviour
 {
     public float timer = 0;
-    private bool startTimer = false;
+    private bool startTimer = true;
     public float Vuelta = 0;
 
     private bool checkpoint1 = false;
