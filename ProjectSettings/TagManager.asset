@@ -47,14 +47,14 @@ TagManager:
   - name: Background3_NoHitbox
     uniqueID: 2219037475
     locked: 0
-  - name: player
-    uniqueID: 390116473
-    locked: 0
   - name: background2_NoHitbox
     uniqueID: 1226172227
     locked: 0
   - name: Background2_Hitbox
     uniqueID: 775701697
+    locked: 0
+  - name: player
+    uniqueID: 390116473
     locked: 0
   - name: BackgroundFake
     uniqueID: 1031701093
