@@ -47,11 +47,10 @@ public class ContadorVueltas: MonoBehaviour
                     Vuelta = timer;
 
                 }
-            for (int runs = 0; runs < 2; runs++)
-            {
+
                 timerGuardado.Add(timer);
-            }
-                Debug.Log(timerGuardado[1]);
+
+                Debug.Log(timerGuardado);
                 startTimer = true;
                 timer = 0;
                 Vuelta += 1;

@@ -7,7 +7,11 @@ public class CarSteering : MonoBehaviour {
 	Rigidbody2D rb;
 
 	[SerializeField]
-	float accelerationPower = 5f;
+	float fuerzaDeAceleracion = 150f;
+	[SerializeField]
+	float VelocidadMaxima = 11000f;
+	[SerializeField]
+	float fuerzaDeDesaceleracion = 800f;
 	[SerializeField]
 	float steeringPower = 5f;
 	float steeringAmount, speed, direction;
@@ -21,7 +25,23 @@ public class CarSteering : MonoBehaviour {
 	void FixedUpdate () {
 
 		steeringAmount = - Input.GetAxis ("Horizontal");
-		speed = Input.GetAxis ("Vertical") * accelerationPower;
+		if (Input.GetAxis("Vertical") > 0.001){
+			if (speed < VelocidadMaxima){
+				speed = speed +  fuerzaDeAceleracion;
+				Debug.Log(speed);
+			}
+		} else{
+			if (speed > 0){
+				speed = speed - 150f;
+			}
+		} 
+		if (Input.GetAxis("Vertical") < -0.0001) {
+			Debug.Log("Hacia detras");
+			if (speed > -5000){
+				speed = speed - fuerzaDeDesaceleracion;
+				Debug.Log(speed);
+			}
+		}
 		direction = Mathf.Sign(Vector2.Dot (rb.velocity, rb.GetRelativeVector(Vector2.up)));
 		rb.rotation += steeringAmount * steeringPower * rb.velocity.magnitude * direction;
 
