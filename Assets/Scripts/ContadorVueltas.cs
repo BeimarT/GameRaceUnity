@@ -8,7 +8,7 @@ public class ContadorVueltas: MonoBehaviour
     public float timer = 0;
     private bool startTimer = true;
     public float Vuelta = 0;
-    public float[] timerGuardado;
+    List<float> timerGuardado = new List<float>();
     private bool checkpoint1 = false; //Cuando estén en true se podrá contar la vuelta
     private bool checkpoint2 = false;
 
@@ -47,8 +47,11 @@ public class ContadorVueltas: MonoBehaviour
                     Vuelta = timer;
 
                 }
-                timerGuardado.Push(timer);
-                Debug.Log(timer);
+            for (int runs = 0; runs < 2; runs++)
+            {
+                timerGuardado.Add(timer);
+            }
+                Debug.Log(timerGuardado[1]);
                 startTimer = true;
                 timer = 0;
                 Vuelta += 1;
