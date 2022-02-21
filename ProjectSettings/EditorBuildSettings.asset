@@ -8,4 +8,19 @@ EditorBuildSettings:
   - enabled: 0
     path: 
     guid: 00000000000000000000000000000000
+  - enabled: 1
+    path: Assets/Scenes/Escena_MenuLoginRegistro.unity
+    guid: 219bddfffcc55fa42b8450063164bbda
+  - enabled: 1
+    path: Assets/Scenes/Escena_Register.unity
+    guid: 6e742f7104c9e824382b54c5f1c7bf08
+  - enabled: 1
+    path: Assets/Scenes/Escena_Login.unity
+    guid: f014d427db8cc9c4885628aeb10bf9d9
+  - enabled: 1
+    path: Assets/Scenes/MainMenu.unity
+    guid: 9f8784799b10e1e4f83b53f985b6e1bd
+  - enabled: 1
+    path: Assets/Scenes/Escena_limites.unity
+    guid: 50c2a250d2f6d2d4da9d16bd4a112c43
   m_configObjects: {}
