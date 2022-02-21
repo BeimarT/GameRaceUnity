@@ -312,7 +312,7 @@ TilemapRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 775701697
-  m_SortingLayer: 4
+  m_SortingLayer: 5
   m_SortingOrder: 0
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 2, y: 2.5, z: 0}
@@ -7535,7 +7535,7 @@ TilemapRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1226172227
-  m_SortingLayer: 3
+  m_SortingLayer: 4
   m_SortingOrder: 0
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0.08181816, y: 0, z: 0}
@@ -21893,7 +21893,7 @@ TilemapRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -142067337
-  m_SortingLayer: 1
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 1, y: 0.8125, z: 0}
@@ -99404,7 +99404,7 @@ GameObject:
   - component: {fileID: 519862995}
   - component: {fileID: 519862994}
   - component: {fileID: 519862993}
-  - component: {fileID: 519862997}
+  - component: {fileID: 519862998}
   m_Layer: 5
   m_Name: MenuPausa
   m_TagString: Untagged
@@ -99493,7 +99493,7 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
---- !u!114 &519862997
+--- !u!114 &519862998
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -99502,7 +99502,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 519862992}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1bf6907df18d4ad409611d5da53919ea, type: 3}
+  m_Script: {fileID: 11500000, guid: 6d9844a0ae4f85d47a9ad055ddd632b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   pauseMenuUI: {fileID: 658385271}
@@ -99689,7 +99689,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &658385272
 RectTransform:
   m_ObjectHideFlags: 0
@@ -99816,7 +99816,7 @@ MonoBehaviour:
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
-    m_FadeDuration: 0.1
+    m_FadeDuration: 0
   m_SpriteState:
     m_HighlightedSprite: {fileID: 0}
     m_PressedSprite: {fileID: 0}
@@ -99870,7 +99870,7 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 990850086}
-  m_CullTransparentMesh: 1
+  m_CullTransparentMesh: 0
 --- !u!1 &1014471665
 GameObject:
   m_ObjectHideFlags: 0
@@ -100143,7 +100143,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d94dbe05af0572845b5af6f63f13f3c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  accelerationPower: 9000
+  fuerzaDeAceleracion: 150
+  VelocidadMaxima: 11000
+  fuerzaDeDesaceleracion: 800
   steeringPower: 0.006
 --- !u!50 &1352701176
 Rigidbody2D:
@@ -100204,7 +100206,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 390116473
-  m_SortingLayer: 5
+  m_SortingLayer: 6
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 6b5f1e46f524009478dd7669f7e9e5c8, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -101343,7 +101345,7 @@ TilemapRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1226172227
-  m_SortingLayer: 3
+  m_SortingLayer: 4
   m_SortingOrder: 0
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 5.5, y: 3, z: 0}
