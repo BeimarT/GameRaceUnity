@@ -254,13 +254,14 @@ GameObject:
   - component: {fileID: 224215250}
   - component: {fileID: 224215249}
   - component: {fileID: 224215253}
+  - component: {fileID: 224215254}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &224215249
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -351,10 +352,22 @@ MonoBehaviour:
   m_GameObject: {fileID: 224215248}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a549a811a20bbc74693538fbabf2d8fb, type: 3}
+  m_Script: {fileID: 11500000, guid: 6d9844a0ae4f85d47a9ad055ddd632b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   pauseMenuUI: {fileID: 465782281}
+--- !u!114 &224215254
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 224215248}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b4677430c24440d458f3760b9118ed8e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &289997340
 GameObject:
   m_ObjectHideFlags: 0
@@ -22148,13 +22161,14 @@ GameObject:
   - component: {fileID: 465782282}
   - component: {fileID: 465782284}
   - component: {fileID: 465782283}
+  - component: {fileID: 465782285}
   m_Layer: 5
   m_Name: PauseMenu
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &465782282
 RectTransform:
   m_ObjectHideFlags: 0
@@ -22215,6 +22229,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 465782281}
   m_CullTransparentMesh: 1
+--- !u!114 &465782285
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 465782281}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b4677430c24440d458f3760b9118ed8e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &478105750
 GameObject:
   m_ObjectHideFlags: 0
@@ -100304,6 +100330,7 @@ GameObject:
   - component: {fileID: 1324416775}
   - component: {fileID: 1324416774}
   - component: {fileID: 1324416773}
+  - component: {fileID: 1324416776}
   m_Layer: 5
   m_Name: Resume
   m_TagString: Untagged
@@ -100374,7 +100401,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1324416774}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1324416776}
+        m_TargetAssemblyTypeName: PlayMainMenu, Assembly-CSharp
+        m_MethodName: ResumeGame
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1324416774
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -100413,6 +100452,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1324416771}
   m_CullTransparentMesh: 1
+--- !u!114 &1324416776
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1324416771}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b4677430c24440d458f3760b9118ed8e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1352701173
 GameObject:
   m_ObjectHideFlags: 0
@@ -100427,8 +100478,6 @@ GameObject:
   - component: {fileID: 1352701179}
   - component: {fileID: 1352701176}
   - component: {fileID: 1352701178}
-  - component: {fileID: 1352701180}
-  - component: {fileID: 1352701181}
   m_Layer: 0
   m_Name: Square
   m_TagString: Untagged
@@ -100466,7 +100515,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d94dbe05af0572845b5af6f63f13f3c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  accelerationPower: 9000
+  fuerzaDeAceleracion: 150
+  VelocidadMaxima: 11000
+  fuerzaDeDesaceleracion: 800
   steeringPower: 0.006
 --- !u!50 &1352701176
 Rigidbody2D:
@@ -100582,34 +100633,6 @@ MonoBehaviour:
   Vuelta: 0
   Tiempo: {fileID: 344620748}
   Vueltas: {fileID: 1540940793}
---- !u!114 &1352701180
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1352701173}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 49b545040b7cf584a9a4d1aa4e9471bc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  driftFactor: 0.95
-  accelerationFactor: 80
-  turnFactor: 3.5
-  maxSpeed: 140
---- !u!114 &1352701181
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1352701173}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a6b761ee2c4a54d4cb49a61011e80a4f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1370379772
 GameObject:
   m_ObjectHideFlags: 0
