@@ -3,8 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class EscenasMenuLogin : MonoBehaviour
-{
+public class EscenasMenuLogin : MonoBehaviour { 
+    public void GoToRegisterLogin()
+    {
+        SceneManager.LoadScene(0);
+    }
     public void GoToRegister ()
     {
         SceneManager.LoadScene(1);
@@ -18,3 +21,4 @@ public class EscenasMenuLogin : MonoBehaviour
         SceneManager.LoadScene(3);
     }
 }
+
