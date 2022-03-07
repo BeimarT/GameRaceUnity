@@ -100620,7 +100620,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Vuelta: 0
   timerGuardado: []
-  NVueltas: 4
+  NVueltas: 1
   countertimer: 100
   text: {fileID: 0}
   Tiempo: {fileID: 344620748}
