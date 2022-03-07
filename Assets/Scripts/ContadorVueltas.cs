@@ -69,7 +69,6 @@ public class ContadorVueltas: MonoBehaviour
                     timerGuardado.Add(timer);
                     // GlobalPlayer.Instance.Tiempo = timer;
                     startTimer = true;
-                    
                     Vuelta += 1;
                     checkpoint1 = false;
                     checkpoint2 = false;
