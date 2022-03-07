@@ -3,24 +3,31 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using TMPro;
 public class ContadorVueltas: MonoBehaviour
 {
-    public float timer = 0;
+    public static ContadorVueltas Instance;
+    public static float timer = 0;
     private bool startTimer = true;
     public float Vuelta = 0;
-    private float countertimer;
-    List<float> timerGuardado = new List<float>();
+    public List<float> timerGuardado = new List<float>();
     private bool checkpoint1 = false; //Cuando estén en true se podrá contar la vuelta
     private bool checkpoint2 = false;
 
+    [SerializeField]
+    public int NVueltas;
+    [SerializeField]
+    public float countertimer;
 
+    public TextMeshProUGUI text;
     public Text Tiempo; //Texto para el tiempo
     public Text Vueltas; //"" "" "" vueltas
+    private TextMeshProUGUI TMPtext;
     void Start()
     {
-        timer = 0; //seteamos tiempo y vuelta en 0
+        timer = 0;  //seteamos tiempo y vuelta en 0
         Vuelta = 0;
-        countertimer = 5;
+        
     }
 
     void Update()
@@ -30,11 +37,19 @@ public class ContadorVueltas: MonoBehaviour
             {
                 timer = timer + Time.deltaTime;
                 Tiempo.text = "  " + timer;
-                Vueltas.text = "  " + Vuelta;
+                Vueltas.text = "  " + Vuelta + " / " + NVueltas;
             }
         } else {
             Time.timeScale = 0;
             SceneManager.LoadScene("MenuPerder");
+        }
+        if (Vuelta == NVueltas){
+            Vuelta = timer;
+            timerGuardado.Add(timer);
+            // GlobalPlayer.Instance.SavePlayer();
+            // Debug.Log(GlobalPlayer.Instance.Tiempo);
+            Time.timeScale = 0;
+            SceneManager.LoadScene("MenuVictoria");
         }
     }
 
@@ -52,10 +67,9 @@ public class ContadorVueltas: MonoBehaviour
                     }
 
                     timerGuardado.Add(timer);
-
-                    Debug.Log(timerGuardado);
+                    // GlobalPlayer.Instance.Tiempo = timer;
                     startTimer = true;
-                    timer = 0;
+                    
                     Vuelta += 1;
                     checkpoint1 = false;
                     checkpoint2 = false;
@@ -77,4 +91,7 @@ public class ContadorVueltas: MonoBehaviour
                 checkpoint2 = true;
             }
         }
+    public void SavePlayer(){
+
+    }
 }
