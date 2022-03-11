@@ -36,15 +36,15 @@ public class ContadorVueltas: MonoBehaviour
             if (startTimer == true)
             {
                 timer = timer + Time.deltaTime;
-                Tiempo.text = "  " + timer.ToString("#.00") + " / " + countertimer;
+                Tiempo.text = "  " + timer;
                 Vueltas.text = "  " + Vuelta + " / " + NVueltas;
             }
         } else {
             Time.timeScale = 0;
             SceneManager.LoadScene("MenuPerder");
-            
         }
         if (Vuelta == NVueltas){
+            Vuelta = timer;
             timerGuardado.Add(timer);
             // GlobalPlayer.Instance.SavePlayer();
             // Debug.Log(GlobalPlayer.Instance.Tiempo);
