@@ -786,7 +786,11 @@ GameObject:
   m_StaticEditorFlags: 0
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_IsActive: 0
+=======
+  m_IsActive: 1
+>>>>>>> parent of 978ef4d (Merge branch 'dev1')
 =======
   m_IsActive: 1
 >>>>>>> parent of 978ef4d (Merge branch 'dev1')

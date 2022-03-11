@@ -804,7 +804,11 @@ MonoBehaviour:
         m_TargetAssemblyTypeName: PlayMainMenu, Assembly-CSharp
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         m_MethodName: 
+=======
+        m_MethodName: PlayGame
+>>>>>>> parent of 978ef4d (Merge branch 'dev1')
 =======
         m_MethodName: PlayGame
 >>>>>>> parent of 978ef4d (Merge branch 'dev1')
