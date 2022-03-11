@@ -802,19 +802,6 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 854232782}
         m_TargetAssemblyTypeName: PlayMainMenu, Assembly-CSharp
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-        m_MethodName: 
-=======
-        m_MethodName: PlayGame
->>>>>>> parent of 978ef4d (Merge branch 'dev1')
-=======
-        m_MethodName: PlayGame
->>>>>>> parent of 978ef4d (Merge branch 'dev1')
-=======
-        m_MethodName: PlayGame
->>>>>>> parent of 978ef4d (Merge branch 'dev1')
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
