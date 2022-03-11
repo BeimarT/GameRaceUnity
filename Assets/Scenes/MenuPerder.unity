@@ -274,7 +274,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: OPCIONES
+  m_Text: REPLAY
 --- !u!222 &416257836
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -428,7 +428,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: RESUME
+  m_Text: Has sobrepasado el tiempo!
 --- !u!222 &462943530
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -450,7 +450,7 @@ GameObject:
   - component: {fileID: 476088041}
   - component: {fileID: 476088040}
   m_Layer: 5
-  m_Name: Resume
+  m_Name: Informacion
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -473,8 +473,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5192709, y: 0.5}
   m_AnchorMax: {x: 0.5192709, y: 0.5}
-  m_AnchoredPosition: {x: -30.510366, y: 128.99994}
-  m_SizeDelta: {x: 161.3601, y: 46.86}
+  m_AnchoredPosition: {x: -1.9271, y: 138}
+  m_SizeDelta: {x: 425.1315, y: 46.86}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &476088040
 MonoBehaviour:
@@ -621,6 +621,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b4677430c24440d458f3760b9118ed8e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pauseMenuUI: {fileID: 0}
 --- !u!1 &896084669
 GameObject:
   m_ObjectHideFlags: 0
@@ -633,6 +634,7 @@ GameObject:
   - component: {fileID: 896084673}
   - component: {fileID: 896084672}
   - component: {fileID: 896084671}
+  - component: {fileID: 896084674}
   m_Layer: 5
   m_Name: QUIT
   m_TagString: Untagged
@@ -657,7 +659,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5192709, y: 0.5}
   m_AnchorMax: {x: 0.5192709, y: 0.5}
-  m_AnchoredPosition: {x: -30.510366, y: -116}
+  m_AnchoredPosition: {x: -1.9271, y: -109}
   m_SizeDelta: {x: 161.3601, y: 46.86}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &896084671
@@ -716,6 +718,18 @@ MonoBehaviour:
           m_StringArgument: Saliendo!
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 896084674}
+        m_TargetAssemblyTypeName: PlayMainMenu, Assembly-CSharp
+        m_MethodName: ExitGame
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &896084672
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -754,6 +768,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 896084669}
   m_CullTransparentMesh: 1
+--- !u!114 &896084674
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 896084669}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b4677430c24440d458f3760b9118ed8e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pauseMenuUI: {fileID: 0}
 --- !u!1 &1135784782
 GameObject:
   m_ObjectHideFlags: 0
@@ -915,8 +942,9 @@ GameObject:
   - component: {fileID: 1627379870}
   - component: {fileID: 1627379869}
   - component: {fileID: 1627379868}
+  - component: {fileID: 1627379871}
   m_Layer: 5
-  m_Name: Opciones
+  m_Name: Replay
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -939,8 +967,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5192709, y: 0.5}
   m_AnchorMax: {x: 0.5192709, y: 0.5}
-  m_AnchoredPosition: {x: -32, y: 21}
-  m_SizeDelta: {x: 161.3601, y: 46.86}
+  m_AnchoredPosition: {x: -1.9271, y: 23.43}
+  m_SizeDelta: {x: 271.6958, y: 46.86}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1627379868
 MonoBehaviour:
@@ -986,10 +1014,10 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1627379866}
-        m_TargetAssemblyTypeName: UnityEngine.Object, UnityEngine
-        m_MethodName: set_name
-        m_Mode: 5
+      - m_Target: {fileID: 1627379871}
+        m_TargetAssemblyTypeName: PlayMainMenu, Assembly-CSharp
+        m_MethodName: ContraReloj
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -997,18 +1025,6 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 1
-        m_CallState: 2
-      - m_Target: {fileID: 702047546}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1627379869
 MonoBehaviour:
@@ -1048,6 +1064,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1627379866}
   m_CullTransparentMesh: 1
+--- !u!114 &1627379871
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1627379866}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b4677430c24440d458f3760b9118ed8e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pauseMenuUI: {fileID: 0}
 --- !u!1 &1988228916
 GameObject:
   m_ObjectHideFlags: 0

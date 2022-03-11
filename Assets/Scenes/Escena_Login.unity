@@ -539,12 +539,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 482353355}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 352403863a0560841bcc3ec877845f67, type: 3}
+  m_Script: {fileID: 11500000, guid: fe31991869e06d54cb0ff4f6f006d1a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gmailField: {fileID: 1729646632}
-  passwordField: {fileID: 1992789807}
-  submitButton: {fileID: 854232779}
 --- !u!114 &482353361
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -802,7 +799,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 854232782}
         m_TargetAssemblyTypeName: PlayMainMenu, Assembly-CSharp
-        m_MethodName: 
+        m_MethodName: ContraReloj
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
