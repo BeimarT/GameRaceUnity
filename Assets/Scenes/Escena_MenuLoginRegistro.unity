@@ -366,6 +366,7 @@ RectTransform:
   m_Children:
   - {fileID: 1117296307}
   - {fileID: 854232778}
+  - {fileID: 1819257317}
   - {fileID: 1925298430}
   m_Father: {fileID: 0}
   m_RootOrder: 1
@@ -551,8 +552,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 854232782}
-        m_TargetAssemblyTypeName: PlayMainMenu, Assembly-CSharp
-        m_MethodName: Registro
+        m_TargetAssemblyTypeName: EscenasMenuLogin, Assembly-CSharp
+        m_MethodName: GoToRegister
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -609,10 +610,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 854232777}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b4677430c24440d458f3760b9118ed8e, type: 3}
+  m_Script: {fileID: 11500000, guid: 0480266a189fd7a488949977fc571986, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pauseMenuUI: {fileID: 0}
 --- !u!1 &967954969
 GameObject:
   m_ObjectHideFlags: 0
@@ -767,7 +767,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1117296306}
   m_CullTransparentMesh: 1
-<<<<<<< HEAD
 --- !u!1 &1819257316
 GameObject:
   m_ObjectHideFlags: 0
@@ -861,8 +860,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1819257316}
   m_CullTransparentMesh: 1
-=======
->>>>>>> parent of aced0f0 (Revert "Merge branch 'main' of https://github.com/BeimarT/GameRaceUnity")
 --- !u!1 &1925298429
 GameObject:
   m_ObjectHideFlags: 0
@@ -896,7 +893,7 @@ RectTransform:
   m_Children:
   - {fileID: 967954970}
   m_Father: {fileID: 482353359}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -948,8 +945,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1925298434}
-        m_TargetAssemblyTypeName: PlayMainMenu, Assembly-CSharp
-        m_MethodName: LogIn
+        m_TargetAssemblyTypeName: EscenasMenuLogin, Assembly-CSharp
+        m_MethodName: GoToLogin
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1006,7 +1003,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 1925298429}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b4677430c24440d458f3760b9118ed8e, type: 3}
+  m_Script: {fileID: 11500000, guid: 0480266a189fd7a488949977fc571986, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pauseMenuUI: {fileID: 0}
