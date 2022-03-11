@@ -6,7 +6,10 @@ using UnityEngine.Networking;
 public class RegisterBBDD : MonoBehaviour
 {
     public InputField usernameField;
+    public InputField gmailField;
+    public InputField nameField;
     public InputField passwordField;
+    public InputField rolField;
     public Button submitButton;
 
     
@@ -18,17 +21,17 @@ public class RegisterBBDD : MonoBehaviour
     IEnumerator Register()
     {
         WWWForm form = new WWWForm();
-        form.AddField("username", "Bei");
-        form.AddField("email", "Beimar@gmail.com");
-        form.AddField("name", "Beimar");
+        form.AddField("username", usernameField.text);
+        form.AddField("email", gmailField.text);
+        form.AddField("name", nameField.text);
+        form.AddField("password", passwordField.text);
+        form.AddField("rol", rolField.text);
         form.AddField("surname", "Torrez");
-        form.AddField("rol", "User");
-        form.AddField("password", "1234567");
         form.AddField("detail", "nada");
         form.AddField("otherInformation", "pruebas");
 
-        using(UnityWebRequest www = UnityWebRequest.Post("http://127.0.0.1:8000/api/user" , form))
-        { 
+        UnityWebRequest www = UnityWebRequest.Post("http://127.0.0.1:8000/api/user" , form);
+        
             yield return www.SendWebRequest();
 
             if(www.result != UnityWebRequest.Result.Success)
@@ -37,7 +40,7 @@ public class RegisterBBDD : MonoBehaviour
             } else {
                 Debug.Log("Register" + www.downloadHandler.text);
             }
-        }
+        
     }
 
         public void VerifyInputs()
