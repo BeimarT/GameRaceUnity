@@ -787,6 +787,7 @@ GameObject:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_IsActive: 0
 =======
   m_IsActive: 1
@@ -797,6 +798,9 @@ GameObject:
 =======
   m_IsActive: 1
 >>>>>>> parent of 978ef4d (Merge branch 'dev1')
+=======
+  m_IsActive: 0
+>>>>>>> parent of 78c2f0c (Merge branch 'main' of https://github.com/BeimarT/GameRaceUnity)
 --- !u!224 &1819257317
 RectTransform:
   m_ObjectHideFlags: 0

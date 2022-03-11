@@ -805,6 +805,7 @@ MonoBehaviour:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         m_MethodName: 
 =======
         m_MethodName: PlayGame
@@ -815,6 +816,9 @@ MonoBehaviour:
 =======
         m_MethodName: PlayGame
 >>>>>>> parent of 978ef4d (Merge branch 'dev1')
+=======
+        m_MethodName: 
+>>>>>>> parent of 78c2f0c (Merge branch 'main' of https://github.com/BeimarT/GameRaceUnity)
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
