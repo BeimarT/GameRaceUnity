@@ -14,7 +14,7 @@ public class RegisterBBDD : MonoBehaviour
 
     
 
-    public void Start()
+    public void RegisterStart()
     {
         StartCoroutine(Register());
     }
@@ -26,23 +26,21 @@ public class RegisterBBDD : MonoBehaviour
         form.AddField("name", nameField.text);
         form.AddField("password", passwordField.text);
         form.AddField("rol", rolField.text);
-        form.AddField("surname", "Torrez");
+        form.AddField("surname", "Prueba");
         form.AddField("detail", "nada");
         form.AddField("otherInformation", "pruebas");
 
         UnityWebRequest www = UnityWebRequest.Post("http://127.0.0.1:8000/api/user" , form);
-        
             yield return www.SendWebRequest();
-
             if(www.result != UnityWebRequest.Result.Success)
             {
                 Debug.Log(www.error);
-            } else {
+            } else
+            {
                 Debug.Log("Register" + www.downloadHandler.text);
             }
-        
+    
     }
-
         public void VerifyInputs()
         {
             submitButton.interactable = (usernameField.text.Length >= 8 && passwordField.text.Length >= 8);
