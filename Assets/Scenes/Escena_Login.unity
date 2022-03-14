@@ -437,8 +437,8 @@ GameObject:
   - component: {fileID: 482353358}
   - component: {fileID: 482353357}
   - component: {fileID: 482353356}
-  - component: {fileID: 482353360}
   - component: {fileID: 482353361}
+  - component: {fileID: 482353360}
   m_Layer: 5
   m_Name: Login
   m_TagString: Untagged
@@ -539,7 +539,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 482353355}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 352403863a0560841bcc3ec877845f67, type: 3}
+  m_Script: {fileID: 11500000, guid: a57e9f89b3117974bae655ea8ee39175, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   gmailField: {fileID: 1729646632}
@@ -729,6 +729,7 @@ GameObject:
   - component: {fileID: 854232780}
   - component: {fileID: 854232779}
   - component: {fileID: 854232782}
+  - component: {fileID: 854232783}
   m_Layer: 5
   m_Name: Login
   m_TagString: Untagged
@@ -800,9 +801,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 482353360}
-        m_TargetAssemblyTypeName: LoginBBDD, Assembly-CSharp
-        m_MethodName: CallLogin
+      - m_Target: {fileID: 854232783}
+        m_TargetAssemblyTypeName: EscenasMenuLogin, Assembly-CSharp
+        m_MethodName: MainMenu
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -863,6 +864,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pauseMenuUI: {fileID: 0}
+--- !u!114 &854232783
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 854232777}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0480266a189fd7a488949977fc571986, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1019213018
 GameObject:
   m_ObjectHideFlags: 0
