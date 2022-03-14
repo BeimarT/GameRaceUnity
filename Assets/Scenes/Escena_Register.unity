@@ -922,7 +922,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 482353361}
         m_TargetAssemblyTypeName: RegisterBBDD, Assembly-CSharp
-        m_MethodName: Start
+        m_MethodName: RegisterStart
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
