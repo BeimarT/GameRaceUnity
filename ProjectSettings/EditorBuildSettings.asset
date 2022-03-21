@@ -21,8 +21,8 @@ EditorBuildSettings:
     path: Assets/Scenes/MainMenu.unity
     guid: 9f8784799b10e1e4f83b53f985b6e1bd
   - enabled: 1
-    path: Assets/Scenes/Escena_ContraReloj.unity
-    guid: d6902762314f2a24e84c6a7d1f5046ac
+    path: Assets/Scenes/MenuModosDeJuego.unity
+    guid: 812bdbcf73c44074980017006e8607cb
   - enabled: 1
     path: Assets/Scenes/Circuito1_Monaco.unity
     guid: dc43b5ffe483c594e89d151571beef60
