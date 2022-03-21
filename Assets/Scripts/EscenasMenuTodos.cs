@@ -24,17 +24,21 @@ public class EscenasMenuTodos : MonoBehaviour {
     {
         SceneManager.LoadScene(4);
     }
-    public void CircuitoMonaco()
+    public void Contrareloj()
     {
         SceneManager.LoadScene(5);
     }
-    public void MenuPerder()
+    public void CircuitoMonaco()
     {
         SceneManager.LoadScene(6);
     }
-    public void MenuGanar()
+    public void MenuPerder()
     {
         SceneManager.LoadScene(7);
+    }
+    public void MenuGanar()
+    {
+        SceneManager.LoadScene(8);
     }
 }
 
