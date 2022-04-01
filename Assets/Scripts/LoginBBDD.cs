@@ -27,7 +27,7 @@ public class LoginBBDD : MonoBehaviour
             {
                 Debug.Log(www.error);
             } else {
-                Debug.Log("Login");
+                Debug.Log("Login succesfull");
             }
     }
 }

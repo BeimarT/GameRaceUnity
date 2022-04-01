@@ -920,9 +920,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 482353361}
+      - m_Target: {fileID: 11500000, guid: 8adf63b5a6578694d885b3e9b7c2f34f, type: 3}
         m_TargetAssemblyTypeName: RegisterBBDD, Assembly-CSharp
-        m_MethodName: RegisterStart
+        m_MethodName: 
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1665,7 +1665,7 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 482353361}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: RegisterBBDD, Assembly-CSharp
         m_MethodName: VerifyInputs
         m_Mode: 1
@@ -1901,7 +1901,7 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 482353361}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: RegisterBBDD, Assembly-CSharp
         m_MethodName: VerifyInputs
         m_Mode: 1
@@ -2056,7 +2056,7 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 482353361}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: RegisterBBDD, Assembly-CSharp
         m_MethodName: VerifyInputs
         m_Mode: 1
@@ -2211,7 +2211,7 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 482353361}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: RegisterBBDD, Assembly-CSharp
         m_MethodName: VerifyInputs
         m_Mode: 1
@@ -2603,7 +2603,7 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 482353361}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: RegisterBBDD, Assembly-CSharp
         m_MethodName: VerifyInputs
         m_Mode: 1

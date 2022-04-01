@@ -396,9 +396,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'SALIR
-
-'
+  m_Text: "Atr\xE1s\n"
 --- !u!222 &312681239
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -457,15 +455,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 0.3137255}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.65882355}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: 57fc3e6ab4b98a54bbde6df142397f7e, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -707,8 +705,9 @@ GameObject:
   - component: {fileID: 1018649630}
   - component: {fileID: 1018649629}
   - component: {fileID: 1018649628}
+  - component: {fileID: 1018649631}
   m_Layer: 5
-  m_Name: Salir
+  m_Name: Atras
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -778,9 +777,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 702047548}
-        m_TargetAssemblyTypeName: PlayMainMenu, Assembly-CSharp
-        m_MethodName: ExitGame
+      - m_Target: {fileID: 1018649631}
+        m_TargetAssemblyTypeName: EscenasMenuTodos, Assembly-CSharp
+        m_MethodName: MainMenu
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -828,6 +827,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1018649626}
   m_CullTransparentMesh: 1
+--- !u!114 &1018649631
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1018649626}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0480266a189fd7a488949977fc571986, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1135784782
 GameObject:
   m_ObjectHideFlags: 0
