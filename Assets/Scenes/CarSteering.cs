@@ -15,6 +15,8 @@ public class CarSteering : MonoBehaviour {
 	[SerializeField]
 	float steeringPower = 5f;
 	float steeringAmount, speed, direction;
+	[SerializeField] KeyCode your_key;
+	[SerializeField] KeyCode your_key2;
 
 	// Use this for initialization
 	void Start () {
@@ -25,7 +27,7 @@ public class CarSteering : MonoBehaviour {
 	void FixedUpdate () {
 
 		steeringAmount = - Input.GetAxis ("Horizontal");
-		if (Input.GetAxis("Vertical") > 0.001){
+		if (Input.GetKey(your_key)){
 			if (speed < VelocidadMaxima){
 				speed = speed +  fuerzaDeAceleracion;
 				Debug.Log(speed);
@@ -35,7 +37,7 @@ public class CarSteering : MonoBehaviour {
 				speed = speed - 150f;
 			}
 		} 
-		if (Input.GetAxis("Vertical") < -0.0001) {
+		if (Input.GetKey(your_key2)) {
 			Debug.Log("Hacia detras");
 			if (speed > -5000){
 				speed = speed - fuerzaDeDesaceleracion;
