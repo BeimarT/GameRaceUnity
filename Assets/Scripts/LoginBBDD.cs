@@ -21,7 +21,7 @@ public class LoginBBDD : MonoBehaviour
         form.AddField("email", gmailField.text.TrimEnd('\u200b'));
         form.AddField("password", passwordField.text.TrimEnd('\u200b'));
 
-        UnityWebRequest www = UnityWebRequest.Post("http://127.0.0.1:8000/api/user/login" , form);
+        UnityWebRequest www = UnityWebRequest.Post("http://127.0.0.1:8000/api/auth/login" , form);
         yield return www.SendWebRequest();
             if(www.result != UnityWebRequest.Result.Success)
             {

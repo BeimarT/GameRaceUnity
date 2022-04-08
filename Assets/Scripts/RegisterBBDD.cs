@@ -30,16 +30,19 @@ public class RegisterBBDD : MonoBehaviour
         form.AddField("detail", "nada");
         form.AddField("otherInformation", "pruebas");
 
-        UnityWebRequest www = UnityWebRequest.Post("http://127.0.0.1:8000/api/user" , form);
+        using (UnityWebRequest www = UnityWebRequest.Post("http://127.0.0.1:8000/api/user" , form))
+        {
             yield return www.SendWebRequest();
+            Debug.Log(www.responseCode);
+            Debug.Log(www.result);
             if(www.result != UnityWebRequest.Result.Success)
             {
                 Debug.Log(www.error);
             } else
             {
-                Debug.Log("Register" + www.downloadHandler.text);
+                Debug.Log("Register succesfull");
             }
-    
+        }
     }
         public void VerifyInputs()
         {
