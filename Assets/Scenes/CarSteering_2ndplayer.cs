@@ -25,7 +25,7 @@ public class CarSteering_2ndplayer : MonoBehaviour {
 
 		rb = GetComponent<Rigidbody2D>();	
 		spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
-		spriteRenderer.sprite = spriteArray[PlayMainMenu.flag];
+		spriteRenderer.sprite = spriteArray[PlayMainMenu.flag + 1];
 	}
 	
 	// Update is called once per frame
@@ -33,13 +33,13 @@ public class CarSteering_2ndplayer : MonoBehaviour {
 		if(Input.GetKey(your_key3) == true || Input.GetKey(your_key4) == true){
 			if (Input.GetKey(your_key4) == true){
 				if (steeringAmount > -10f){
-					steeringAmount = steeringAmount - 1f;
+					steeringAmount = steeringAmount - 0.5f;
 					Debug.Log(steeringAmount);
 				}
 			}
 			if (Input.GetKey(your_key3) == true){			
 				if (steeringAmount < 1f){
-					steeringAmount = steeringAmount + 1f;
+					steeringAmount = steeringAmount + 0.5f;
 					Debug.Log(steeringAmount);
 				}
 			}
