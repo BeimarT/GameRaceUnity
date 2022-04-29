@@ -23,9 +23,20 @@ public class TextSync : MonoBehaviour
     void Update()
     {
         float tiempoencontrado = ContadorVueltas.timer;
-        // Debug.Log(GlobalPlayer.Instance.Tiempo);
-        // tiempoencontrado = GlobalPlayer.Instance.Tiempo.ToString();
 
-        textoACambiar.text = tiempoencontrado.ToString();
+        //Lista con todos los tiempos 
+        List<float> totalTimes  = ContadorVueltas.timerGuardado;
+
+        float bestLap = 1000;
+        for(int i = 0; i < totalTimes.Count -1; i++) 
+        {
+            if(totalTimes[i] < bestLap){
+                bestLap = totalTimes[i];
+            }
+        }
+        //Peticion a la api con la var filtrada
+        
+
+        textoACambiar.text = bestLap.ToString();
     }
 }

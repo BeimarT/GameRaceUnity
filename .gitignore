@@ -24,11 +24,13 @@ ExportedObj/
 *.pdb
 *.opendb
 *.VC.db
+.meta
 
 # Unity3D generated meta files
 *.pidb.meta
 *.pdb.meta
-
+*.meta
+.meta
 # Unity3D Generated File On Crash Reports
 sysinfo.txt
 
@@ -36,3 +38,10 @@ sysinfo.txt
 *.apk
 *.unitypackage
 *.log
+*.meta
+*.meta
+*.meta
+Assets/Scenes/CarSteering_2ndplayer.cs.meta
+Assets/Scenes/Circuito1_Monaco_DoublePlayer.unity.meta
+*.meta
+*.meta
