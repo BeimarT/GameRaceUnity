@@ -100144,6 +100144,8 @@ MonoBehaviour:
   VelocidadMaxima: 11000
   fuerzaDeDesaceleracion: 800
   steeringPower: 0.006
+  your_key: 119
+  your_key2: 115
 --- !u!50 &1352701176
 Rigidbody2D:
   serializedVersion: 4
@@ -100254,8 +100256,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dbf7a5f8f42378549bfa1c5b1e75a865, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timer: 0
   Vuelta: 0
+  NVueltas: 2
+  countertimer: 120
+  text: {fileID: 0}
   Tiempo: {fileID: 344620748}
   Vueltas: {fileID: 1540940793}
 --- !u!1 &1370379772

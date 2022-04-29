@@ -9,7 +9,6 @@ public class RegisterBBDD : MonoBehaviour
     public InputField gmailField;
     public InputField nameField;
     public InputField passwordField;
-    public InputField rolField;
     public Button submitButton;
 
     
@@ -25,10 +24,10 @@ public class RegisterBBDD : MonoBehaviour
         form.AddField("email", gmailField.text);
         form.AddField("name", nameField.text);
         form.AddField("password", passwordField.text);
-        form.AddField("rol", rolField.text);
+        form.AddField("rol", "User");
         form.AddField("surname", "Prueba");
-        form.AddField("detail", "nada");
-        form.AddField("otherInformation", "pruebas");
+        form.AddField("detail", "Prueba");
+        form.AddField("otherInformation", "Pruebas");
 
         using (UnityWebRequest www = UnityWebRequest.Post("http://127.0.0.1:8000/api/user" , form))
         {
