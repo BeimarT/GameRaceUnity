@@ -37,7 +37,8 @@ public class ContadorVueltas: MonoBehaviour
     {
         timer = 0;  //seteamos tiempo y vuelta en 0
         Vuelta = 0;
-        
+        Scene scene = SceneManager.GetActiveScene();
+        Debug.Log("Active Scene es " + scene.name);
     }
 
     void Update()
@@ -67,7 +68,12 @@ public class ContadorVueltas: MonoBehaviour
     void OnTriggerEnter2D(Collider2D other)
     {
             if (other.gameObject.name == "Start"){
+<<<<<<< Updated upstream
                 if (checkpoint1 == true && checkpoint2 == true/*checkpoint1 == true && checkpoint2 == true && checkpoint3 == true && checkpoint4 == true && checkpoint5 == true && checkpoint6 == true && checkpoint7 == true && checkpoint8 == true && checkpoint9 == true && checkpoint10 == true && checkpoint11 == true && checkpoint12 == true*/)
+=======
+                if (checkpoint1 == true && checkpoint2 == true)
+                //  && checkpoint3 == true && checkpoint4 == true && checkpoint5 == true && checkpoint6 == true && checkpoint7 == true && checkpoint8 == true && checkpoint9 == true && checkpoint10 == true && checkpoint11 == true && checkpoint12 == true)
+>>>>>>> Stashed changes
                 {
                     startTimer = false;
                     if (timer < Vuelta)
@@ -82,6 +88,7 @@ public class ContadorVueltas: MonoBehaviour
                     Vuelta += 1;
                     checkpoint1 = false;
                     checkpoint2 = false;
+<<<<<<< Updated upstream
                     // checkpoint3 = false;
                     // checkpoint4 = false;
                     // checkpoint5 = false;
@@ -92,6 +99,19 @@ public class ContadorVueltas: MonoBehaviour
                     // checkpoint10 = false;
                     // checkpoint11 = false;
                     // checkpoint12 = false;
+=======
+                    checkpoint3 = false;
+                    checkpoint4 = false;
+                    checkpoint5 = false;
+                    checkpoint6 = false;
+                    checkpoint7 = false;
+                    checkpoint8 = false;
+                    checkpoint9 = false;
+                    checkpoint10 = false;
+                    checkpoint11 = false;
+                    checkpoint12 = false;
+                    timer=0;
+>>>>>>> Stashed changes
                 }
             }
 
