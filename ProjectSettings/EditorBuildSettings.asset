@@ -5,9 +5,6 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
   - enabled: 1
     path: Assets/Scenes/Escena_MenuLoginRegistro.unity
     guid: 219bddfffcc55fa42b8450063164bbda
@@ -21,22 +18,8 @@ EditorBuildSettings:
     path: Assets/Scenes/MainMenu.unity
     guid: 9f8784799b10e1e4f83b53f985b6e1bd
   - enabled: 1
-    path: Assets/Scenes/MenuModosDeJuego.unity
-    guid: 812bdbcf73c44074980017006e8607cb
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
-  - enabled: 1
     path: Assets/Scenes/Escena_ContraReloj.unity
     guid: d6902762314f2a24e84c6a7d1f5046ac
-  - enabled: 0
-<<<<<<< Updated upstream
-    path: 
-    guid: 00000000000000000000000000000000
-=======
-    path: Assets/Scenes/Circuito1_Monaco.unity
-    guid: dc43b5ffe483c594e89d151571beef60
->>>>>>> Stashed changes
   - enabled: 1
     path: Assets/Scenes/MenuPerder.unity
     guid: e89de4f901a761d4193a1f3ed0ceec22

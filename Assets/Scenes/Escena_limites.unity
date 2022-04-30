@@ -100102,7 +100102,11 @@ GameObject:
   - component: {fileID: 1352701179}
   - component: {fileID: 1352701176}
   - component: {fileID: 1352701178}
+<<<<<<< Updated upstream
   - component: {fileID: 1352701175}
+=======
+  - component: {fileID: 1352701180}
+>>>>>>> Stashed changes
   m_Layer: 0
   m_Name: Square
   m_TagString: Untagged
@@ -100135,7 +100139,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1352701173}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2449186a144265b4cac342987d421a9d, type: 3}
   m_Name: 
@@ -100150,7 +100154,12 @@ MonoBehaviour:
   your_key3: 97
   your_key4: 100
   spriteArray: []
+<<<<<<< Updated upstream
   spriteRenderer: {fileID: 0}
+=======
+  spriteRenderer: {fileID: 1352701177}
+  rb2: {fileID: 1352701176}
+>>>>>>> Stashed changes
 --- !u!50 &1352701176
 Rigidbody2D:
   serializedVersion: 4
@@ -100267,6 +100276,29 @@ MonoBehaviour:
   text: {fileID: 0}
   Tiempo: {fileID: 344620748}
   Vueltas: {fileID: 1540940793}
+--- !u!114 &1352701180
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1352701173}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2449186a144265b4cac342987d421a9d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rb: {fileID: 0}
+  fuerzaDeAceleracion: 150
+  VelocidadMaxima: 11000
+  fuerzaDeDesaceleracion: 800
+  steeringPower: 0.008
+  your_key: 119
+  your_key2: 115
+  your_key3: 97
+  your_key4: 100
+  spriteArray: []
+  spriteRenderer: {fileID: 1352701177}
 --- !u!1 &1370379772
 GameObject:
   m_ObjectHideFlags: 0

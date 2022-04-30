@@ -45,3 +45,5 @@ Assets/Scenes/CarSteering_2ndplayer.cs.meta
 Assets/Scenes/Circuito1_Monaco_DoublePlayer.unity.meta
 *.meta
 *.meta
+UserSettings/EditorUserSettings.asset
+Assets/Scenes/Escena_limites.unity

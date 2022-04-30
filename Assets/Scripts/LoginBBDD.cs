@@ -23,10 +23,10 @@ public class LoginBBDD : MonoBehaviour
     IEnumerator Login()
     {
         WWWForm form = new WWWForm();
-        form.AddField("email", gmailField.text.TrimEnd('\u200b'));
-        form.AddField("password", passwordField.text.TrimEnd('\u200b'));
+        form.AddField("email", gmailField.text);
+        form.AddField("password", passwordField.text);
 
-        UnityWebRequest www = UnityWebRequest.Post("http://127.0.0.1:8000/api/auth/login" , form);
+        UnityWebRequest www = UnityWebRequest.Post("http://127.0.0.1:8000/api/login" , form);
         yield return www.SendWebRequest();
             if(www.result != UnityWebRequest.Result.Success)
             {
