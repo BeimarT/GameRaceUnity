@@ -40,7 +40,7 @@ public class LoginBBDD : MonoBehaviour
     }
     public static bool LoggedIn {
         get {
-            return username != null;
+            return username != "null";
         }
     }
 }

@@ -1360,7 +1360,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &655669261
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1515,7 +1515,7 @@ GameObject:
   - component: {fileID: 726231343}
   - component: {fileID: 726231342}
   m_Layer: 5
-  m_Name: Coleccionable
+  m_Name: MejorVuelta
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1538,8 +1538,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5192709, y: 0.5}
   m_AnchorMax: {x: 0.5192709, y: 0.5}
-  m_AnchoredPosition: {x: -284.8299, y: 26.569996}
-  m_SizeDelta: {x: 203.6698, y: 46.86}
+  m_AnchoredPosition: {x: -223, y: -52}
+  m_SizeDelta: {x: 203.6698, y: 40.764}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &726231342
 MonoBehaviour:
@@ -1659,8 +1659,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5192709, y: 0.5}
   m_AnchorMax: {x: 0.5192709, y: 0.5}
-  m_AnchoredPosition: {x: -41.58, y: 124}
-  m_SizeDelta: {x: 282.83, y: 46.86}
+  m_AnchoredPosition: {x: -46, y: 52}
+  m_SizeDelta: {x: 560.6055, y: 46.86}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &791076088
 MonoBehaviour:
@@ -1907,7 +1907,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &886495352
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3223,9 +3223,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Coleccionable
-
-'
+  m_Text: "Mejor vuelta: \n"
 --- !u!222 &1496372085
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3252,7 +3250,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1554963955
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4162,7 +4160,7 @@ MonoBehaviour:
     m_BestFit: 0
     m_MinSize: 0
     m_MaxSize: 300
-    m_Alignment: 1
+    m_Alignment: 3
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
@@ -4274,7 +4272,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2095693120
 RectTransform:
   m_ObjectHideFlags: 0

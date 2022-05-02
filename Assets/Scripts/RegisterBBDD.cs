@@ -24,7 +24,7 @@ public class RegisterBBDD : MonoBehaviour
         form.AddField("email", gmailField.text);
         form.AddField("name", nameField.text);
         form.AddField("password", passwordField.text);
-        form.AddField("rol", "User");
+        form.AddField("rol", "user");
         form.AddField("surname", "Prueba");
         form.AddField("detail", "Prueba");
         form.AddField("otherInformation", "Pruebas");
