@@ -95,7 +95,7 @@ public class ContadorVueltas: MonoBehaviour
                     // checkpoint10 = false;
                     // checkpoint11 = false;
                     // checkpoint12 = false;
-                    // timer=0;
+                    timer=0;
                 }
             }
 

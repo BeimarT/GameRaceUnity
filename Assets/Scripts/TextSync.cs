@@ -14,12 +14,12 @@ public class TextSync : MonoBehaviour
     public Text textoACambiar;
     public List<float> timerGuardado = new List<float>();
     public string tiempoencontrado = "";
-    Scene map = SceneManager.GetActiveScene();
     float bestLap = 1000;
 
     // Start is called before the first frame update
     void Start()
     {
+
         // tiempoencontrado = GameObject.Find("ContadorContraVueltas").GetComponent<ContadorVueltas>().timerGuardado[0].ToString();
     }
     
@@ -49,6 +49,8 @@ public class TextSync : MonoBehaviour
     }
     IEnumerator BestLapSave()
     {
+                Scene map = SceneManager.GetActiveScene();
+
         WWWForm form = new WWWForm();
         form.AddField("user", LoginBBDD.username);
         form.AddField("time", bestLap.ToString());
