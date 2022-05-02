@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.Networking;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
@@ -13,11 +14,15 @@ public class TextSync : MonoBehaviour
     public Text textoACambiar;
     public List<float> timerGuardado = new List<float>();
     public string tiempoencontrado = "";
+    Scene map = SceneManager.GetActiveScene();
+    float bestLap = 1000;
+
     // Start is called before the first frame update
     void Start()
     {
         // tiempoencontrado = GameObject.Find("ContadorContraVueltas").GetComponent<ContadorVueltas>().timerGuardado[0].ToString();
     }
+    
 
     // Update is called once per frame
     void Update()
@@ -27,16 +32,36 @@ public class TextSync : MonoBehaviour
         //Lista con todos los tiempos 
         List<float> totalTimes  = ContadorVueltas.timerGuardado;
 
-        float bestLap = 1000;
         for(int i = 0; i < totalTimes.Count -1; i++) 
         {
             if(totalTimes[i] < bestLap){
                 bestLap = totalTimes[i];
             }
-        }
-        //Peticion a la api con la var filtrada
-        
+        }        
 
         textoACambiar.text = bestLap.ToString();
+    }
+    //Peticion a la api con la var filtrada
+
+    public void saveBestLapMongoDB()
+    {
+        StartCoroutine(BestLapSave());
+    }
+    IEnumerator BestLapSave()
+    {
+        WWWForm form = new WWWForm();
+        form.AddField("user", LoginBBDD.username);
+        form.AddField("time", bestLap.ToString());
+        form.AddField("map", map.ToString());
+
+        UnityWebRequest www = UnityWebRequest.Post("http://127.0.0.1:8000/api/timelap" , form);
+        yield return www.SendWebRequest();
+            if(www.result != UnityWebRequest.Result.Success)
+            {
+                Debug.Log(www.error);
+
+            } else {
+                Debug.Log("Best lap saved succesfull");
+            }
     }
 }
