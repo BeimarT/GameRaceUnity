@@ -40,6 +40,7 @@ public class TextSync : MonoBehaviour
         }        
 
         textoACambiar.text = bestLap.ToString();
+        // saveBestLapMongoDB(); hace muchas peticiones, llamarlo en otro
     }
     //Peticion a la api con la var filtrada
 
@@ -49,12 +50,11 @@ public class TextSync : MonoBehaviour
     }
     IEnumerator BestLapSave()
     {
-                Scene map = SceneManager.GetActiveScene();
-
+        Scene map = SceneManager.GetActiveScene();
         WWWForm form = new WWWForm();
         form.AddField("user", LoginBBDD.username);
         form.AddField("time", bestLap.ToString());
-        form.AddField("map", map.ToString());
+        form.AddField("map", map.name);
 
         UnityWebRequest www = UnityWebRequest.Post("http://127.0.0.1:8000/api/timelap" , form);
         yield return www.SendWebRequest();
