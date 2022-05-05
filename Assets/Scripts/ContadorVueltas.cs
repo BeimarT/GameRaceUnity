@@ -57,6 +57,7 @@ public class ContadorVueltas: MonoBehaviour
         }
         if (Vuelta == NVueltas){
             Vuelta = timer;
+            //LLAMAR FUNCIÓN PARA GUARDAR MEJOR VUELTA
             timerGuardado.Add(timer);
             // GlobalPlayer.Instance.SavePlayer();
             // Debug.Log(GlobalPlayer.Instance.Tiempo);

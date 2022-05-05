@@ -11,7 +11,7 @@ public class LoginUsername : MonoBehaviour
     {
         if(LoginBBDD.LoggedIn)
         {
-            playerDisplay.text = LoginBBDD.username;
+            playerDisplay.text = "Bienvenido: "+ LoginBBDD.username;
         }
     }
 
