@@ -23,7 +23,8 @@ public class ContadorVueltas: MonoBehaviour
     // private bool checkpoint10 = false;
     // private bool checkpoint11 = false;
     // private bool checkpoint12 = false;
-
+    [SerializeField]
+    string Nombre;
     [SerializeField]
     public int NVueltas;
     [SerializeField]

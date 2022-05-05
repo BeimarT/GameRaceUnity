@@ -135,6 +135,7 @@ GameObject:
   - component: {fileID: 174414892}
   - component: {fileID: 174414891}
   - component: {fileID: 174414890}
+  - component: {fileID: 174414893}
   m_Layer: 5
   m_Name: Temporada
   m_TagString: Untagged
@@ -205,7 +206,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 174414891}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 174414893}
+        m_TargetAssemblyTypeName: GameSelector, Assembly-CSharp
+        m_MethodName: PlayGame_Monaco_DoublePlayer
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &174414891
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -244,6 +257,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 174414888}
   m_CullTransparentMesh: 1
+--- !u!114 &174414893
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 174414888}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6aa4c424ca7abd04d97958c5b9809a7d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &179378358
 GameObject:
   m_ObjectHideFlags: 0
@@ -550,7 +575,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Contrareloj
+  m_Text: SinglePlayer
 --- !u!222 &500331813
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -569,6 +594,7 @@ GameObject:
   m_Component:
   - component: {fileID: 702047547}
   - component: {fileID: 702047548}
+  - component: {fileID: 702047549}
   m_Layer: 5
   m_Name: ModosDeJuego
   m_TagString: Untagged
@@ -612,6 +638,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pauseMenuUI: {fileID: 0}
+  repeat: 0
+--- !u!114 &702047549
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 702047546}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1955055ad0550e4eb63ed84f59065fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &772507932
 GameObject:
   m_ObjectHideFlags: 0
@@ -1000,6 +1039,8 @@ GameObject:
   - component: {fileID: 1381825615}
   - component: {fileID: 1381825614}
   - component: {fileID: 1381825613}
+  - component: {fileID: 1381825616}
+  - component: {fileID: 1381825617}
   m_Layer: 5
   m_Name: Contrareloj
   m_TagString: Untagged
@@ -1071,9 +1112,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 702047548}
-        m_TargetAssemblyTypeName: PlayMainMenu, Assembly-CSharp
-        m_MethodName: PlayGame
+      - m_Target: {fileID: 1381825617}
+        m_TargetAssemblyTypeName: GameSelector, Assembly-CSharp
+        m_MethodName: PlayGame_Monaco_SinglePlayer
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1121,6 +1162,30 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1381825611}
   m_CullTransparentMesh: 1
+--- !u!114 &1381825616
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1381825611}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1955055ad0550e4eb63ed84f59065fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1381825617
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1381825611}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6aa4c424ca7abd04d97958c5b9809a7d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1707093982
 GameObject:
   m_ObjectHideFlags: 0
