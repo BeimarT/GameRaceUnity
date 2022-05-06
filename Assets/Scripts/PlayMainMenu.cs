@@ -19,10 +19,20 @@ public class PlayMainMenu : MonoBehaviour
     public void goToMainMenu(){
         SceneManager.LoadScene("MainMenu");
     }
-    public void PlayGame()
+    public void PlayGame_Monaco()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-        Time.timeScale = 1;
+        if (multiplayer){
+            Time.timeScale = 1;
+            SceneManager.LoadScene("Circuito1_Monaco_DoublePlayer");
+        } else {
+            Time.timeScale = 1;
+            SceneManager.LoadScene("Circuito1_Monaco_SinglePlayer");
+        }
+    }
+    public void PlayGame_Tutorial()
+    {
+            Time.timeScale = 1;
+            SceneManager.LoadScene("Escena_Tutorial");
     }
     public void goToSelectorDeModo(){
         SceneManager.LoadScene("MenuModosDeJuego");
