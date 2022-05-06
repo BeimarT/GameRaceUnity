@@ -35,7 +35,7 @@ public class LoginBBDD : MonoBehaviour
             } else {
                 Debug.Log("Login succesfull");
                 username = gmailField.text;
-                SceneManager.LoadScene(3);
+                SceneManager.LoadScene("MainMenu");
             }
     }
     public static bool LoggedIn {
