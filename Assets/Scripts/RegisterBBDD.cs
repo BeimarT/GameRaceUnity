@@ -25,11 +25,13 @@ public class RegisterBBDD : MonoBehaviour
         form.AddField("name", nameField.text);
         form.AddField("password", passwordField.text);
         form.AddField("rol", "user");
-        form.AddField("surname", "Prueba");
-        form.AddField("detail", "Prueba");
+        form.AddField("surname", "Pruebas");
+        form.AddField("detail", "Pruebas");
         form.AddField("otherInformation", "Pruebas");
+        form.AddField("photo", "Pruebas");
+        form.AddField("googleID", "Pruebas");
 
-        using (UnityWebRequest www = UnityWebRequest.Post("http://127.0.0.1:8000/api/user" , form))
+        using (UnityWebRequest www = UnityWebRequest.Post("https://apidefinitivalaravelbrumbrum.herokuapp.com/api/user" , form))
         {
             yield return www.SendWebRequest();
             Debug.Log(www.responseCode);
