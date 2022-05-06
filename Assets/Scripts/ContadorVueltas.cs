@@ -13,6 +13,7 @@ public class ContadorVueltas: MonoBehaviour
     public static List<float> timerGuardado = new List<float>();
     private bool checkpoint1 = false; //Cuando estén en true se podrá contar la vuelta
     private bool checkpoint2 = false;
+    public static string map = null;
     // private bool checkpoint3 = false;  
     // private bool checkpoint4 = false;  
     // private bool checkpoint5 = false;
@@ -23,7 +24,8 @@ public class ContadorVueltas: MonoBehaviour
     // private bool checkpoint10 = false;
     // private bool checkpoint11 = false;
     // private bool checkpoint12 = false;
-
+    [SerializeField]
+    string Nombre;
     [SerializeField]
     public int NVueltas;
     [SerializeField]
@@ -37,8 +39,8 @@ public class ContadorVueltas: MonoBehaviour
     {
         timer = 0;  //seteamos tiempo y vuelta en 0
         Vuelta = 0;
-        Scene scene = SceneManager.GetActiveScene();
-        Debug.Log("Active Scene es " + scene.name);
+        map = SceneManager.GetActiveScene().name;
+        Debug.Log("Active Scene es " + map);
     }
 
     void Update()

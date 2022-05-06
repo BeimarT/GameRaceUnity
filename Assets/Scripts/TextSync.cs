@@ -20,13 +20,6 @@ public class TextSync : MonoBehaviour
     void Start()
     {
 
-        // tiempoencontrado = GameObject.Find("ContadorContraVueltas").GetComponent<ContadorVueltas>().timerGuardado[0].ToString();
-    }
-    
-
-    // Update is called once per frame
-    void Update()
-    {
         float tiempoencontrado = ContadorVueltas.timer;
 
         //Lista con todos los tiempos 
@@ -40,8 +33,15 @@ public class TextSync : MonoBehaviour
         }        
 
         textoACambiar.text = bestLap.ToString();
-        // saveBestLapMongoDB(); hace muchas peticiones, llamarlo en otro
+        saveBestLapMongoDB();
+        // tiempoencontrado = GameObject.Find("ContadorContraVueltas").GetComponent<ContadorVueltas>().timerGuardado[0].ToString();
     }
+    
+
+    // Update is called once per frame
+    // void Update()
+    // {
+    // }
     //Peticion a la api con la var filtrada
 
     public void saveBestLapMongoDB()
@@ -50,11 +50,11 @@ public class TextSync : MonoBehaviour
     }
     IEnumerator BestLapSave()
     {
-        Scene map = SceneManager.GetActiveScene();
+
         WWWForm form = new WWWForm();
         form.AddField("user", LoginBBDD.username);
         form.AddField("time", bestLap.ToString());
-        form.AddField("map", map.name);
+        form.AddField("map", ContadorVueltas.map.ToString());
 
         UnityWebRequest www = UnityWebRequest.Post("http://127.0.0.1:8000/api/timelap" , form);
         yield return www.SendWebRequest();
