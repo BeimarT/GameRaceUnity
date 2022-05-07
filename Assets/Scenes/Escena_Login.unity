@@ -630,7 +630,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Enter text...
+  m_Text: Gmail
 --- !u!222 &605446653
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -673,10 +673,10 @@ RectTransform:
   m_Father: {fileID: 482353359}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5192709, y: 0.5}
-  m_AnchorMax: {x: 0.5192709, y: 0.5}
-  m_AnchoredPosition: {x: -288.59766, y: 146.95126}
-  m_SizeDelta: {x: 203.6698, y: 46.86}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: -315.25165, y: 154.25165}
+  m_SizeDelta: {x: -730.5033, y: -388.5033}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &756608321
 MonoBehaviour:
@@ -741,7 +741,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 756608319}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
@@ -754,8 +754,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: 1ffddf44541dabb4490ec3611588dd42, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -946,7 +946,7 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
-        m_CallState: 2
+        m_CallState: 0
       - m_Target: {fileID: 482353360}
         m_TargetAssemblyTypeName: LoginBBDD, Assembly-CSharp
         m_MethodName: CallLogin
@@ -1233,7 +1233,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "ATR\xC1S\n"
+  m_Text: 
 --- !u!222 &1157974524
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1705,8 +1705,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1992789808}
   m_TextComponent: {fileID: 1308069015}
   m_Placeholder: {fileID: 1994269860}
-  m_ContentType: 0
-  m_InputType: 0
+  m_ContentType: 7
+  m_InputType: 2
   m_AsteriskChar: 42
   m_KeyboardType: 0
   m_LineType: 0
@@ -1835,7 +1835,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Enter text...
+  m_Text: "Contrase\xF1a"
 --- !u!222 &1994269861
 CanvasRenderer:
   m_ObjectHideFlags: 0

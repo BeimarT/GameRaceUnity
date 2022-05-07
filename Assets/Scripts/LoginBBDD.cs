@@ -34,6 +34,7 @@ public class LoginBBDD : MonoBehaviour
 
             } else {
                 Debug.Log("Login succesfull");
+                Debug.Log(www.downloadHandler.text);
                 username = gmailField.text;
                 SceneManager.LoadScene("MainMenu");
             }
