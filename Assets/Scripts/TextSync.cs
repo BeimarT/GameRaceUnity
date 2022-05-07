@@ -14,24 +14,22 @@ public class TextSync : MonoBehaviour
     public Text textoACambiar;
     public List<float> timerGuardado = new List<float>();
     public string tiempoencontrado = "";
-    float bestLap = 1000;
+    float bestLap = 12000;
 
     // Start is called before the first frame update
     void Start()
     {
-
-        float tiempoencontrado = ContadorVueltas.timer;
-
+        // float tiempoencontrado = ContadorVueltas.timer;
         //Lista con todos los tiempos 
         List<float> totalTimes  = ContadorVueltas.timerGuardado;
 
-        for(int i = 0; i < totalTimes.Count -1; i++) 
+        for(int i = 0; i < totalTimes.Count; i++) 
         {
             if(totalTimes[i] < bestLap){
+                Debug.Log(totalTimes[i]);
                 bestLap = totalTimes[i];
             }
         }        
-
         textoACambiar.text = bestLap.ToString();
         saveBestLapMongoDB();
         // tiempoencontrado = GameObject.Find("ContadorContraVueltas").GetComponent<ContadorVueltas>().timerGuardado[0].ToString();

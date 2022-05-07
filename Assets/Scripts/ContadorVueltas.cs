@@ -4,6 +4,8 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using TMPro;
+using System.Threading.Tasks;
+
 public class ContadorVueltas: MonoBehaviour
 {
     public static ContadorVueltas Instance;
@@ -39,6 +41,7 @@ public class ContadorVueltas: MonoBehaviour
     {
         timer = 0;  //seteamos tiempo y vuelta en 0
         Vuelta = 0;
+        startTimer = true;
         map = SceneManager.GetActiveScene().name;
         Debug.Log("Active Scene es " + map);
     }
@@ -56,15 +59,7 @@ public class ContadorVueltas: MonoBehaviour
             Time.timeScale = 0;
             SceneManager.LoadScene("MenuPerder");
         }
-        if (Vuelta == NVueltas){
-            Vuelta = timer;
-            //LLAMAR FUNCIÓN PARA GUARDAR MEJOR VUELTA
-            timerGuardado.Add(timer);
-            // GlobalPlayer.Instance.SavePlayer();
-            // Debug.Log(GlobalPlayer.Instance.Tiempo);
-            Time.timeScale = 0;
-            SceneManager.LoadScene("MenuVictoria");
-        }
+
     }
 
 
@@ -74,19 +69,21 @@ public class ContadorVueltas: MonoBehaviour
                 if (checkpoint1 == true && checkpoint2 == true)
                 //  && checkpoint3 == true && checkpoint4 == true && checkpoint5 == true && checkpoint6 == true && checkpoint7 == true && checkpoint8 == true && checkpoint9 == true && checkpoint10 == true && checkpoint11 == true && checkpoint12 == true)
                 {
-                    startTimer = false;
-                    if (timer < Vuelta)
-                    {
-                        Vuelta = timer;
-
+                    if (Vuelta + 1 == NVueltas){
+                        Debug.Log(timerGuardado.ToString());
+                        timerGuardado.Add(timer);
+                        SceneManager.LoadScene("MenuVictoria");
+                        Time.timeScale = 0;
+                    } else {
+                        Debug.Log(timerGuardado);
+                        timerGuardado.Add(timer);
+                        Vuelta += 1;
+                        checkpoint1 = false;
+                        checkpoint2 = false;
+                        timer=0;
                     }
-
-                    timerGuardado.Add(timer);
                     // GlobalPlayer.Instance.Tiempo = timer;
-                    startTimer = true;
-                    Vuelta += 1;
-                    checkpoint1 = false;
-                    checkpoint2 = false;
+
                     // checkpoint3 = false;
                     // checkpoint4 = false;
                     // checkpoint5 = false;
@@ -97,7 +94,6 @@ public class ContadorVueltas: MonoBehaviour
                     // checkpoint10 = false;
                     // checkpoint11 = false;
                     // checkpoint12 = false;
-                    timer=0;
                 }
             }
 
