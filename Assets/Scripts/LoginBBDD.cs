@@ -3,7 +3,9 @@ using System.Collections.Generic;
 using UnityEngine.Networking;
 using UnityEngine;
 using UnityEngine.UI;
+using System.IO;
 using UnityEngine.SceneManagement;
+using LitJson;
 
 
 public class LoginBBDD : MonoBehaviour
@@ -11,6 +13,7 @@ public class LoginBBDD : MonoBehaviour
     public InputField gmailField;
     public InputField passwordField;
     public InputField usernameField;
+    public static int id;
 
     public static string username;
 
@@ -31,11 +34,14 @@ public class LoginBBDD : MonoBehaviour
             if(www.result != UnityWebRequest.Result.Success)
             {
                 Debug.Log(www.error);
+                Debug.Log("Credentials incorrectos");
 
             } else {
                 Debug.Log("Login succesfull");
                 Debug.Log(www.downloadHandler.text);
-                username = gmailField.text;
+                JsonData jsondata = JsonMapper.ToObject(www.downloadHandler.text);
+                // id = (int) jsondata["User"];
+                username = (string) jsondata["body"]["username"];
                 SceneManager.LoadScene("MainMenu");
             }
     }
