@@ -132,8 +132,8 @@ public class ContadorVueltas: MonoBehaviour
             {
                 Debug.Log("CheckPoint8");
                 checkpoint8 = true;
+                callLogs();
             }
-            callLogs();
     }
 
     public void callLogs ()
