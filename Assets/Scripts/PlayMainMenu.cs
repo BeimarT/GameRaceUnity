@@ -13,9 +13,6 @@ public class PlayMainMenu : MonoBehaviour
     public int repeat = 0;
     public static int flag2 = 0;
     bool multiplayer = GameSelector.multiplayer;
-    public void goToTutorial(){
-        SceneManager.LoadScene("Escena_Tutorial");
-    }
     public void goToMainMenu(){
         SceneManager.LoadScene("MainMenu");
     }

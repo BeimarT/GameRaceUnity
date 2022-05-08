@@ -266,7 +266,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 174414888}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6aa4c424ca7abd04d97958c5b9809a7d, type: 3}
+  m_Script: {fileID: 11500000, guid: 4c13f044f1bd0f94c83d2489f3cb1102, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &179378358
@@ -363,7 +363,6 @@ GameObject:
   - component: {fileID: 234712082}
   - component: {fileID: 234712081}
   - component: {fileID: 234712080}
-  - component: {fileID: 234712079}
   - component: {fileID: 234712083}
   m_Layer: 5
   m_Name: Tutorial
@@ -392,18 +391,6 @@ RectTransform:
   m_AnchoredPosition: {x: -24, y: -77.92}
   m_SizeDelta: {x: 205.8809, y: 39.9203}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &234712079
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 234712077}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6aa4c424ca7abd04d97958c5b9809a7d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &234712080
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -450,7 +437,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 234712083}
         m_TargetAssemblyTypeName: PlayMainMenu, Assembly-CSharp
-        m_MethodName: goToTutorial
+        m_MethodName: PlayGame_Tutorial
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1580,7 +1567,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1381825616}
+      - m_Target: {fileID: 1381825617}
         m_TargetAssemblyTypeName: GameSelector, Assembly-CSharp
         m_MethodName: PlayGame_Monaco_SinglePlayer
         m_Mode: 1
@@ -1651,7 +1638,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1381825611}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ede3a6bfd9f6bb84aa3329b8d084375c, type: 3}
+  m_Script: {fileID: 11500000, guid: 4c13f044f1bd0f94c83d2489f3cb1102, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1707093982
