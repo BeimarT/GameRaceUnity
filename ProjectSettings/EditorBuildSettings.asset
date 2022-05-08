@@ -35,16 +35,16 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/MenuModosDeJuego.unity
     guid: 812bdbcf73c44074980017006e8607cb
-  - enabled: 1
-    path: Assets/Scenes/Circuito1_Monaco_SinglePlayer.unity
-    guid: cd784f4a2246e044cbc4936ecc1b55a9
-  - enabled: 1
-    path: Assets/Scenes/Escena_Tutorial.unity
-    guid: 0f9f6b408b9a6354898bb204b6884fcf
   - enabled: 0
     path: 
     guid: 00000000000000000000000000000000
   - enabled: 0
-    path: Assets/Scenes/Escena_FreePlay.unity
-    guid: e264542ef7a024e419cc26cec118e282
+    path: 
+    guid: 00000000000000000000000000000000
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
   m_configObjects: {}
