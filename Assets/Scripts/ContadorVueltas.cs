@@ -5,17 +5,27 @@ using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using TMPro;
 using System.Threading.Tasks;
+using BayatGames.SaveGameFree;
 
 public class ContadorVueltas: MonoBehaviour
 {
+    	public class PlayerData{
+		public float positiony;
+        public float positionx;
+		public float timer;
+        public int vueltas; 
+        public bool checkpoint1;
+        public bool checkpoint2;
+	}
     public static ContadorVueltas Instance;
     public static float timer = 0;
     private bool startTimer = true;
-    public float Vuelta = 0;
+    public static int vuelta = 0;
     public static List<float> timerGuardado = new List<float>();
-    private bool checkpoint1 = false; //Cuando estén en true se podrá contar la vuelta
-    private bool checkpoint2 = false;
-    public static string map = null;
+    public static bool checkpoint1 = false; //Cuando estén en true se podrá contar la vuelta
+    public static bool checkpoint2 = false;
+    public static string map;
+    public string username = LoginBBDD.username;
     // private bool checkpoint3 = false;  
     // private bool checkpoint4 = false;  
     // private bool checkpoint5 = false;
@@ -27,8 +37,6 @@ public class ContadorVueltas: MonoBehaviour
     // private bool checkpoint11 = false;
     // private bool checkpoint12 = false;
     [SerializeField]
-    string Nombre;
-    [SerializeField]
     public int NVueltas;
     [SerializeField]
     public float countertimer;
@@ -39,11 +47,31 @@ public class ContadorVueltas: MonoBehaviour
     private TextMeshProUGUI TMPtext;
     void Start()
     {
-        timer = 0;  //seteamos tiempo y vuelta en 0
-        Vuelta = 0;
-        startTimer = true;
-        map = SceneManager.GetActiveScene().name;
-        Debug.Log("Active Scene es " + map);
+        if (GameSelector.multiplayer == true ){
+                map = SceneManager.GetActiveScene().name;
+                timer = 0;  //seteamos tiempo y vuelta en 0
+                vuelta = 0;
+                startTimer = true;
+                checkpoint1 = false;
+                checkpoint2 = false;
+        } else {
+            if (SaveGame.Exists(username + SceneManager.GetActiveScene().name)){
+                map = SceneManager.GetActiveScene().name;
+                timer = SaveGame.Load<PlayerData>(username + SceneManager.GetActiveScene().name).timer; 
+                vuelta = SaveGame.Load<PlayerData>(username + SceneManager.GetActiveScene().name).vueltas;
+                startTimer = true;
+                checkpoint1 = SaveGame.Load<PlayerData>(username + SceneManager.GetActiveScene().name).checkpoint1;
+                checkpoint2 = SaveGame.Load<PlayerData>(username + SceneManager.GetActiveScene().name).checkpoint2;
+            } else {
+                map = SceneManager.GetActiveScene().name;
+                Debug.Log(map);
+                timer = 0;  //seteamos tiempo y vuelta en 0
+                vuelta = 0;
+                startTimer = true;
+                checkpoint1 = false;
+                checkpoint2 = false;
+            }
+        }
     }
 
     void Update()
@@ -52,38 +80,41 @@ public class ContadorVueltas: MonoBehaviour
             if (startTimer == true)
             {
                 timer = timer + Time.deltaTime;
-                Tiempo.text = "  " + timer;
-                Vueltas.text = "  " + Vuelta + " / " + NVueltas;
+                Tiempo.text = "  " + Mathf.Round(timer * 100f) / 100f;
+                Vueltas.text = "  " + vuelta + " / " + NVueltas;
             }
         } else {
             Time.timeScale = 0;
+            SaveGame.Delete(username +  SceneManager.GetActiveScene().name);
             SceneManager.LoadScene("MenuPerder");
         }
+        }
 
-    }
 
 
-    void OnTriggerEnter2D(Collider2D other)
-    {
-            if (other.gameObject.name == "Start"){
-                if (checkpoint1 == true && checkpoint2 == true)
+    void OnTriggerEnter2D(Collider2D other){
+        if (other.gameObject.name == "Start"){
+            if (checkpoint1 == true && checkpoint2 == true){
                 //  && checkpoint3 == true && checkpoint4 == true && checkpoint5 == true && checkpoint6 == true && checkpoint7 == true && checkpoint8 == true && checkpoint9 == true && checkpoint10 == true && checkpoint11 == true && checkpoint12 == true)
-                {
-                    if (Vuelta + 1 == NVueltas){
-                        Debug.Log(timerGuardado.ToString());
-                        timerGuardado.Add(timer);
-                        SceneManager.LoadScene("MenuVictoria");
-                        Time.timeScale = 0;
+                if (vuelta + 1 == NVueltas){
+                    if (SaveGame.Exists(username + SceneManager.GetActiveScene().name)){
+                        Debug.Log("exists");
+                        SaveGame.Delete(username + SceneManager.GetActiveScene().name);
+                    }
+                    timerGuardado.Add(timer);
+                    SceneManager.LoadScene("MenuVictoria");
+                    Time.timeScale = 0;
+                    timer = 0;
+                    vuelta = 0;
+                    checkpoint1 = false; 
+                    checkpoint2 = false;
                     } else {
-                        Debug.Log(timerGuardado);
                         timerGuardado.Add(timer);
-                        Vuelta += 1;
+                        vuelta += 1;
                         checkpoint1 = false;
                         checkpoint2 = false;
                         timer=0;
                     }
-                    // GlobalPlayer.Instance.Tiempo = timer;
-
                     // checkpoint3 = false;
                     // checkpoint4 = false;
                     // checkpoint5 = false;
@@ -99,13 +130,13 @@ public class ContadorVueltas: MonoBehaviour
 
             if (other.gameObject.name == "CheckPoint1")
             {
-                Debug.Log("CheckPoint1");
+                // Debug.Log("CheckPoint1");
                 checkpoint1 = true;
             }
 
             if (other.gameObject.name == "CheckPoint2")
             {
-                Debug.Log("CheckPoint2");
+                // Debug.Log("CheckPoint2");
                 checkpoint2 = true;
             }
             // if (other.gameObject.name == "CheckPoint3")
@@ -158,8 +189,5 @@ public class ContadorVueltas: MonoBehaviour
             //     Debug.Log("CheckPoint2");
             //     checkpoint12 = true;
             // }
-        }
-    public void SavePlayer(){
-
     }
-}
+    }

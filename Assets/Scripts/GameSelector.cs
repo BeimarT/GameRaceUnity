@@ -8,13 +8,13 @@ public class GameSelector : MonoBehaviour
     // Start is called before the first frame update
 
         public void PlayGame_Monaco_DoublePlayer(){
-            SceneManager.LoadScene("MenuSelectorJuego");
             multiplayer = true;
+            SceneManager.LoadScene("MenuMapas");
         }
         
         public void PlayGame_Monaco_SinglePlayer(){
-            SceneManager.LoadScene("MenuSelectorJuego");
             multiplayer = false;
+            SceneManager.LoadScene("MenuMapas");
         }
 
     // Update is called once per frame

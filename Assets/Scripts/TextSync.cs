@@ -26,7 +26,6 @@ public class TextSync : MonoBehaviour
         for(int i = 0; i < totalTimes.Count; i++) 
         {
             if(totalTimes[i] < bestLap){
-                Debug.Log(totalTimes[i]);
                 bestLap = totalTimes[i];
             }
         }        
@@ -50,7 +49,8 @@ public class TextSync : MonoBehaviour
     {
 
         WWWForm form = new WWWForm();
-        form.AddField("user", LoginBBDD.username);
+        Debug.Log(ContadorVueltas.map);
+        form.AddField("user", LoginBBDD.username.ToString());
         form.AddField("time", bestLap.ToString());
         form.AddField("map", ContadorVueltas.map.ToString());
 

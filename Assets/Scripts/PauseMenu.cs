@@ -2,13 +2,26 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using BayatGames.SaveGameFree;
 public class PauseMenu : MonoBehaviour
 {
 
     public static bool GameIsPaused = false;
     public GameObject pauseMenuUI;
-
+    public string username = LoginBBDD.username;
+    public float timer;
+    public float x;
+    public float y;
     // Update is called once per frame
+    	public class PlayerData{
+		public float positiony;
+        public float positionx;
+		public float timer;
+        public int vueltas; 
+        public float positionx2;
+        public float positiony2;
+        public float rotation;
+	}
     void Update()
     {
      if(Input.GetKeyDown(KeyCode.Escape))
@@ -36,6 +49,13 @@ public class PauseMenu : MonoBehaviour
     }
     public void Quit()
     {
+        PlayerData data = new PlayerData();
+        data.timer = ContadorVueltas.timer;
+        data.positionx = CarSteering_2ndplayer.posX;
+        data.positiony = CarSteering_2ndplayer.posY;
+        data.vueltas = ContadorVueltas.vuelta;
+        data.rotation = CarSteering_2ndplayer.rotation;
+        SaveGame.Save<PlayerData>(username + SceneManager.GetActiveScene().name, data);
         SceneManager.LoadScene("MainMenu");
     }
 }

@@ -27,8 +27,23 @@ EditorBuildSettings:
     path: Assets/Scenes/MenuVictoria.unity
     guid: f1c68c03f014f6241958f6d5eb650080
   - enabled: 1
+    path: Assets/Scenes/Escena_Ciudad.unity
+    guid: c071bcf02d8b3c04a858140c20aa468e
+  - enabled: 1
     path: Assets/Scenes/Circuito1_Monaco_DoublePlayer.unity
     guid: 16427d6ff880f5e42a6b3ae756d66983
+  - enabled: 1
+    path: Assets/Scenes/MenuSelectorJuego_Ciudad.unity
+    guid: c6a0cccc39b957042bdda614e2aa8ce0
+  - enabled: 1
+    path: Assets/Scenes/Circuito1_Monaco_SinglePlayer.unity
+    guid: 8d0f4eb898d72e74aba5c1c691e2f4f9
+  - enabled: 1
+    path: Assets/Scenes/Escena_Ciudad_DoublePlayer.unity
+    guid: 6be68224a3f5207409d05adeaeb18393
+  - enabled: 1
+    path: Assets/Scenes/MenuMapas.unity
+    guid: 8f2f67ebf9c7eb94484854f09fe10abc
   - enabled: 1
     path: Assets/Scenes/MenuSelectorJuego.unity
     guid: a97ddef2142d66741b1040ec99cbca02
@@ -36,11 +51,14 @@ EditorBuildSettings:
     path: Assets/Scenes/MenuModosDeJuego.unity
     guid: 812bdbcf73c44074980017006e8607cb
   - enabled: 1
-    path: Assets/Scenes/Circuito1_Monaco_SinglePlayer.unity
-    guid: cd784f4a2246e044cbc4936ecc1b55a9
-  - enabled: 1
     path: Assets/Scenes/Escena_Tutorial.unity
-    guid: 0f9f6b408b9a6354898bb204b6884fcf
+    guid: 9ef0cd94c52adec45b57af4a915d7284
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
   - enabled: 0
     path: 
     guid: 00000000000000000000000000000000
