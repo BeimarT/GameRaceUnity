@@ -32,8 +32,10 @@ public class PlayMainMenu : MonoBehaviour
         if (multiplayer == true){
             Time.timeScale = 1;
             if (ContadorVueltas.map == "Escena_Ciudad_DoublePlayer"){
+                    Time.timeScale = 1;
                     SceneManager.LoadScene("Escena_Ciudad_DoublePlayer");
                 } else{
+                    Time.timeScale = 1;
                     SceneManager.LoadScene("Circuito1_Monaco_DoublePlayer");
                 }
         } else {
@@ -41,6 +43,7 @@ public class PlayMainMenu : MonoBehaviour
                 Time.timeScale = 1;
                 SceneManager.LoadScene("Escena_ciudad");
             } else{
+                Time.timeScale = 1;
                 SceneManager.LoadScene("Circuito1_Monaco_SinglePlayer");
             }
         }
