@@ -79,6 +79,10 @@ public class CarSteering_2ndplayercopia : MonoBehaviour {
 			if (speed > -5000){
 				speed = speed - fuerzaDeDesaceleracion;
 			}
+		} else {
+			if (speed < 0){
+				speed = speed + 150f;
+			}
 		}
 		direction = Mathf.Sign(Vector2.Dot (rb.velocity, rb.GetRelativeVector(Vector2.up)));
 		rb.rotation += steeringAmount * steeringPower * rb.velocity.magnitude * direction;
