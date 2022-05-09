@@ -17,6 +17,7 @@ public class ContadorVueltas: MonoBehaviour
         public int vueltas; 
         public bool checkpoint1;
         public bool checkpoint2;
+        public float counterTimerResultant;
 	}
     public static ContadorVueltas Instance;
     public static float timer = 0;
@@ -37,7 +38,7 @@ public class ContadorVueltas: MonoBehaviour
     // private bool checkpoint10 = false;
     // private bool checkpoint11 = false;
     // private bool checkpoint12 = false;
-    float counterTimerResultant;
+    public static float counterTimerResultant;
     [SerializeField]
     public int NVueltas;
     [SerializeField]
@@ -58,13 +59,14 @@ public class ContadorVueltas: MonoBehaviour
                 checkpoint1 = false;
                 checkpoint2 = false;
         } else {
-            if (SaveGame.Exists(username + SceneManager.GetActiveScene().name)){
+            if (SaveGame.Exists(LoginBBDD.username + SceneManager.GetActiveScene().name)){
                 map = SceneManager.GetActiveScene().name;
-                timer = SaveGame.Load<PlayerData>(username + SceneManager.GetActiveScene().name).timer; 
-                vuelta = SaveGame.Load<PlayerData>(username + SceneManager.GetActiveScene().name).vueltas;
+                timer = SaveGame.Load<PlayerData>(LoginBBDD.username + SceneManager.GetActiveScene().name).timer; 
+                vuelta = SaveGame.Load<PlayerData>(LoginBBDD.username + SceneManager.GetActiveScene().name).vueltas;
                 startTimer = true;
-                checkpoint1 = SaveGame.Load<PlayerData>(username + SceneManager.GetActiveScene().name).checkpoint1;
-                checkpoint2 = SaveGame.Load<PlayerData>(username + SceneManager.GetActiveScene().name).checkpoint2;
+                checkpoint1 = SaveGame.Load<PlayerData>(LoginBBDD.username + SceneManager.GetActiveScene().name).checkpoint1;
+                checkpoint2 = SaveGame.Load<PlayerData>(LoginBBDD.username + SceneManager.GetActiveScene().name).checkpoint2;
+                counterTimerResultant = SaveGame.Load<PlayerData>(LoginBBDD.username + SceneManager.GetActiveScene().name).counterTimerResultant;
             } else {
                 map = SceneManager.GetActiveScene().name;
                 Debug.Log(map);
@@ -90,7 +92,8 @@ public class ContadorVueltas: MonoBehaviour
             }
         } else {
             Time.timeScale = 0;
-            SaveGame.Delete(username +  SceneManager.GetActiveScene().name);
+            Debug.Log(LoginBBDD.username + " " + map);    
+            SaveGame.Delete(LoginBBDD.username + map);
             SceneManager.LoadScene("MenuPerder");
         }
     }
@@ -101,9 +104,9 @@ public class ContadorVueltas: MonoBehaviour
         if (other.gameObject.name == "Start"){
             if (checkpoint1 == true && checkpoint2 == true  && checkpoint3 == true && checkpoint4 == true && checkpoint5 == true && checkpoint6 == true && checkpoint7 == true && checkpoint8){
                 if (vuelta + 1 == NVueltas){
-                    if (SaveGame.Exists(username + SceneManager.GetActiveScene().name)){
-                        Debug.Log("exists");
-                        SaveGame.Delete(username + SceneManager.GetActiveScene().name);
+                    if (SaveGame.Exists(username + map)){
+                        Debug.Log("HayUsuario");
+                        SaveGame.Delete(username + map);
                     }
                     timerGuardado.Add(timer);
                     SceneManager.LoadScene("MenuVictoria");
@@ -112,6 +115,12 @@ public class ContadorVueltas: MonoBehaviour
                     vuelta = 0;
                     checkpoint1 = false; 
                     checkpoint2 = false;
+                    checkpoint3 = false;
+                    checkpoint4 = false;
+                    checkpoint5 = false;
+                    checkpoint6 = false;
+                    checkpoint7 = false;
+                    checkpoint8 = false;
                     } else {
                         timerGuardado.Add(timer);
                         vuelta += 1;

@@ -294,7 +294,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pauseMenuUI: {fileID: 465782281}
-  username: tester@gmail.com
   timer: 0
   x: 0
   y: 0
@@ -99809,7 +99808,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pauseMenuUI: {fileID: 0}
-  username: tester@gmail.com
   timer: 0
   x: 0
   y: 0
@@ -100475,7 +100473,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   username: tester@gmail.com
   NVueltas: 1
-  countertimer: 30
+  countertimer: 10
   text: {fileID: 0}
   Tiempo: {fileID: 2133200046}
   Vueltas: {fileID: 1741602250}

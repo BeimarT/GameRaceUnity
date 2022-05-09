@@ -12,6 +12,7 @@ public class CarSteering_2ndplayer : MonoBehaviour {
 		public float timer;
         public int vueltas; 
 		public float rotation;
+		public float counterTimerResultant;
 	}
 	public static float posX;
 	public static float posY;
@@ -33,18 +34,16 @@ public class CarSteering_2ndplayer : MonoBehaviour {
 	[SerializeField] KeyCode your_key4;
 	[SerializeField] Sprite[] spriteArray;
 	[SerializeField] SpriteRenderer spriteRenderer;
-	string username = LoginBBDD.username;
 	// Use this for initialization
 	void Start () {
 		rb = GetComponent<Rigidbody2D>();
 		spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
 		spriteRenderer.sprite = spriteArray[PlayMainMenu.flag + 1];
-		if (GameSelector.multiplayer){
-
+		if (GameSelector.multiplayer ==  true){
 		} else {
-			if (SaveGame.Exists(username +  SceneManager.GetActiveScene().name)){
+			if (SaveGame.Exists(LoginBBDD.username +  SceneManager.GetActiveScene().name)){
 				Debug.Log("entra en carsteering");
-				PlayerData player = SaveGame.Load<PlayerData>(username + SceneManager.GetActiveScene().name);
+				PlayerData player = SaveGame.Load<PlayerData>(LoginBBDD.username + SceneManager.GetActiveScene().name);
 				rb.position = new Vector2(player.positionx, player.positiony);	
 				rb.rotation = player.rotation;
 			}

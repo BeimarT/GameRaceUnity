@@ -35,13 +35,14 @@ public class LoginBBDD : MonoBehaviour
             {
                 Debug.Log(www.error);
                 Debug.Log("Credentials incorrectos");
-
             } else {
+
                 Debug.Log("Login succesfull");
                 Debug.Log(www.downloadHandler.text);
                 JsonData jsondata = JsonMapper.ToObject(www.downloadHandler.text);
                 // id = (int) jsondata["User"];
                 username = (string) jsondata["body"]["username"];
+                Debug.Log(username);
                 SceneManager.LoadScene("MainMenu");
             }
     }

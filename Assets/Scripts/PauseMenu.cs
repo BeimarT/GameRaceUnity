@@ -8,7 +8,6 @@ public class PauseMenu : MonoBehaviour
 
     public static bool GameIsPaused = false;
     public GameObject pauseMenuUI;
-    public string username = LoginBBDD.username;
     public float timer;
     public float x;
     public float y;
@@ -21,6 +20,7 @@ public class PauseMenu : MonoBehaviour
         public float positionx2;
         public float positiony2;
         public float rotation;
+        public float counterTimerResultant;
 	}
     void Update()
     {
@@ -55,7 +55,9 @@ public class PauseMenu : MonoBehaviour
         data.positiony = CarSteering_2ndplayer.posY;
         data.vueltas = ContadorVueltas.vuelta;
         data.rotation = CarSteering_2ndplayer.rotation;
-        SaveGame.Save<PlayerData>(username + SceneManager.GetActiveScene().name, data);
+        data.counterTimerResultant = ContadorVueltas.counterTimerResultant;
+        Debug.Log(data.counterTimerResultant);
+        SaveGame.Save<PlayerData>(LoginBBDD.username + SceneManager.GetActiveScene().name, data);
         SceneManager.LoadScene("MainMenu");
     }
 }
