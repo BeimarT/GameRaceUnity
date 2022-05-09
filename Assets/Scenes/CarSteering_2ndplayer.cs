@@ -1,9 +1,11 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using BayatGames.SaveGameFree;
 
 public class CarSteering_2ndplayer : MonoBehaviour {
 
+	[SerializeField]string Nombre;
 	[SerializeField]Rigidbody2D rb;
 	[SerializeField]
 	float fuerzaDeAceleracion = 150f;
@@ -22,7 +24,8 @@ public class CarSteering_2ndplayer : MonoBehaviour {
 	[SerializeField] SpriteRenderer spriteRenderer;
 	// Use this for initialization
 	void Start () {
-
+		SaveGame.Save<string> (Nombre, "hola jugador1!");
+		Debug.Log(SaveGame.Load<string> (Nombre));
 		rb = GetComponent<Rigidbody2D>();	
 		spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
 		spriteRenderer.sprite = spriteArray[PlayMainMenu.flag + 1];
@@ -34,13 +37,11 @@ public class CarSteering_2ndplayer : MonoBehaviour {
 			if (Input.GetKey(your_key4) == true){
 				if (steeringAmount > -10f){
 					steeringAmount = steeringAmount - 0.5f;
-					Debug.Log(steeringAmount);
 				}
 			}
 			if (Input.GetKey(your_key3) == true){			
 				if (steeringAmount < 1f){
 					steeringAmount = steeringAmount + 0.5f;
-					Debug.Log(steeringAmount);
 				}
 			}
 			} else {
@@ -60,7 +61,6 @@ public class CarSteering_2ndplayer : MonoBehaviour {
 				speed = speed - fuerzaDeDesaceleracion;
 			}
 		}
-		Debug.Log(steeringAmount);
 		direction = Mathf.Sign(Vector2.Dot (rb.velocity, rb.GetRelativeVector(Vector2.up)));
 		rb.rotation += steeringAmount * steeringPower * rb.velocity.magnitude * direction;
 		steeringAmount = 0f;
