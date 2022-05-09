@@ -27,7 +27,6 @@ public class ContadorVueltas: MonoBehaviour
     public string username = LoginBBDD.username;
     private bool checkpoint1 = false; //Cuando estén en true se podrá contar la vuelta
     private bool checkpoint2 = false;
-    public static string map = null;
     private bool checkpoint3 = false;  
     private bool checkpoint4 = false;  
     private bool checkpoint5 = false;
@@ -38,6 +37,7 @@ public class ContadorVueltas: MonoBehaviour
     // private bool checkpoint10 = false;
     // private bool checkpoint11 = false;
     // private bool checkpoint12 = false;
+    float counterTimerResultant;
     [SerializeField]
     public int NVueltas;
     [SerializeField]
@@ -49,6 +49,7 @@ public class ContadorVueltas: MonoBehaviour
     private TextMeshProUGUI TMPtext;
     void Start()
     {
+        counterTimerResultant = countertimer;
         if (GameSelector.multiplayer == true ){
                 map = SceneManager.GetActiveScene().name;
                 timer = 0;  //seteamos tiempo y vuelta en 0
@@ -82,7 +83,9 @@ public class ContadorVueltas: MonoBehaviour
             if (startTimer == true)
             {
                 timer = timer + Time.deltaTime;
-                Tiempo.text = "  " + Mathf.Round(timer * 100f) / 100f;
+
+                counterTimerResultant = counterTimerResultant - Time.deltaTime;
+                Tiempo.text = "  " + counterTimerResultant;
                 Vueltas.text = "  " + vuelta + " / " + NVueltas;
             }
         } else {
@@ -96,7 +99,7 @@ public class ContadorVueltas: MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other){
         if (other.gameObject.name == "Start"){
-            if (checkpoint1 == true && checkpoint2 == true  && checkpoint3 == true && checkpoint4 == true && checkpoint5 == true && checkpoint6 == true && checkpoint7 == true && checkpoint8)){
+            if (checkpoint1 == true && checkpoint2 == true  && checkpoint3 == true && checkpoint4 == true && checkpoint5 == true && checkpoint6 == true && checkpoint7 == true && checkpoint8){
                 if (vuelta + 1 == NVueltas){
                     if (SaveGame.Exists(username + SceneManager.GetActiveScene().name)){
                         Debug.Log("exists");
