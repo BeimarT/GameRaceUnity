@@ -439,6 +439,7 @@ GameObject:
   - component: {fileID: 482353356}
   - component: {fileID: 482353360}
   - component: {fileID: 482353361}
+  - component: {fileID: 482353362}
   m_Layer: 5
   m_Name: Login
   m_TagString: Untagged
@@ -558,6 +559,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0480266a189fd7a488949977fc571986, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &482353362
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 482353355}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 844f431aca7d89446b4c8b3429492463, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &605446650
@@ -754,7 +767,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 1ffddf44541dabb4490ec3611588dd42, type: 3}
+  m_Sprite: {fileID: 21300000, guid: d9d31bdad39ead2409a99bb4944cd3c3, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -935,18 +948,6 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 854232783}
-        m_TargetAssemblyTypeName: EscenasMenuTodos, Assembly-CSharp
-        m_MethodName: 
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 0
       - m_Target: {fileID: 482353360}
         m_TargetAssemblyTypeName: LoginBBDD, Assembly-CSharp
         m_MethodName: CallLogin

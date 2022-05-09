@@ -2146,7 +2146,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1988228923}
         m_TargetAssemblyTypeName: PlayMainMenu, Assembly-CSharp
         m_MethodName: ExitGame
         m_Mode: 1
@@ -3699,6 +3699,7 @@ GameObject:
   - component: {fileID: 1988228917}
   - component: {fileID: 1988228921}
   - component: {fileID: 1988228922}
+  - component: {fileID: 1988228923}
   m_Layer: 5
   m_Name: Menu
   m_TagString: Untagged
@@ -3898,6 +3899,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0480266a189fd7a488949977fc571986, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1988228923
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1988228916}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b4677430c24440d458f3760b9118ed8e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pauseMenuUI: {fileID: 0}
+  repeat: 0
 --- !u!1 &2003485600
 GameObject:
   m_ObjectHideFlags: 0
