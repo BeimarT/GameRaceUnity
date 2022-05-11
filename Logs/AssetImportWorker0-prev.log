@@ -15,11 +15,11 @@ D:/Users/beima/Downloads/JuegoProyectoBien/GameRaceUnity
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-59570
+55012
 Successfully changed project path to: D:/Users/beima/Downloads/JuegoProyectoBien/GameRaceUnity
 D:/Users/beima/Downloads/JuegoProyectoBien/GameRaceUnity
 Using Asset Import Pipeline V2.
-Refreshing native plugins compatible for Editor in 60.01 ms, found 1 plugins.
+Refreshing native plugins compatible for Editor in 149.01 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2020.3.0f1 (c7b5465681fb)
 [Subsystems] Discovering subsystems at path D:/Unity/2020.3.0f1/Editor/Data/Resources/UnitySubsystems
@@ -35,48 +35,129 @@ Initialize mono
 Mono path[0] = 'D:/Unity/2020.3.0f1/Editor/Data/Managed'
 Mono path[1] = 'D:/Unity/2020.3.0f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
 Mono config path = 'D:/Unity/2020.3.0f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56536
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56616
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: D:/Unity/2020.3.0f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.002371 seconds.
+Registered in 0.001698 seconds.
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 54.34 ms, found 1 plugins.
+Refreshing native plugins compatible for Editor in 131.62 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
 RoslynAnalysisRunner has terminated.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.174 seconds
+- Completed reload, in  1.984 seconds
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.003255 seconds.
+Registered in 0.002756 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 55.92 ms, found 1 plugins.
+Refreshing native plugins compatible for Editor in 145.30 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
 RoslynAnalysisRunner has terminated.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.891 seconds
+- Completed reload, in  2.154 seconds
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.07 seconds
-Refreshing native plugins compatible for Editor in 0.60 ms, found 1 plugins.
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.14 seconds
+Refreshing native plugins compatible for Editor in 2.69 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 1906 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 91.5 MB.
-System memory in use after: 91.6 MB.
+System memory in use before: 91.4 MB.
+System memory in use after: 91.5 MB.
 
 Unloading 21 unused Assets to reduce memory usage. Loaded Objects now: 2353.
-Total: 2.537500 ms (FindLiveObjects: 0.340400 ms CreateObjectMapping: 0.087500 ms MarkObjects: 2.016000 ms  DeleteObjects: 0.091600 ms)
+Total: 4.666600 ms (FindLiveObjects: 0.485200 ms CreateObjectMapping: 0.126700 ms MarkObjects: 3.906700 ms  DeleteObjects: 0.145500 ms)
 
 ========================================================================
 Received Import Request.
-  path: Assets/Scenes/Circuito1_Monaco_SinglePlayer.unity
-  artifactKey: Guid(8d0f4eb898d72e74aba5c1c691e2f4f9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/Circuito1_Monaco_SinglePlayer.unity using Guid(8d0f4eb898d72e74aba5c1c691e2f4f9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd16b6ed2219336ff423d6cf92d323677') in 0.022054 seconds
-  Import took 0.028808 seconds .
+  path: Assets/Materials/fechaRegreso.png
+  artifactKey: Guid(d9d31bdad39ead2409a99bb4944cd3c3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/fechaRegreso.png using Guid(d9d31bdad39ead2409a99bb4944cd3c3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '40db993dad82e2b6b102a247bf4ca29d') in 0.259955 seconds
+  Import took 0.267830 seconds .
 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000941 seconds.
+  path: Assets/Scenes/Escena_Register.unity
+  artifactKey: Guid(6e742f7104c9e824382b54c5f1c7bf08) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Escena_Register.unity using Guid(6e742f7104c9e824382b54c5f1c7bf08) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bd515d3f5db9942f1b2d09b0584b75d7') in 0.013096 seconds
+  Import took 0.020709 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 54.846853 seconds.
+  path: Assets/Scenes/Escena_MenuLoginRegistro.unity
+  artifactKey: Guid(219bddfffcc55fa42b8450063164bbda) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Escena_MenuLoginRegistro.unity using Guid(219bddfffcc55fa42b8450063164bbda) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '15f91d004ec2780319bc0afab3ddbf60') in 0.059641 seconds
+  Import took 0.068922 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 23.935983 seconds.
+  path: Assets/Scenes/Escena_MenuLoginRegistro.unity
+  artifactKey: Guid(219bddfffcc55fa42b8450063164bbda) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Escena_MenuLoginRegistro.unity using Guid(219bddfffcc55fa42b8450063164bbda) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '38b4452a2702fc40fb9f941ad8083f00') in 0.009307 seconds
+  Import took 0.055156 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 54.142513 seconds.
+  path: Assets/Scenes/Escena_MenuLoginRegistro.unity
+  artifactKey: Guid(219bddfffcc55fa42b8450063164bbda) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Escena_MenuLoginRegistro.unity using Guid(219bddfffcc55fa42b8450063164bbda) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8f05533ecd784a5f0b15a77abd052be1') in 0.014564 seconds
+  Import took 0.062659 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 63.952675 seconds.
+  path: Assets/BayatGames/SaveGameFree/PressKit/Unity Package Key Images - Large-01.png
+  artifactKey: Guid(182673c593d83234b897aa5d3079f421) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BayatGames/SaveGameFree/PressKit/Unity Package Key Images - Large-01.png using Guid(182673c593d83234b897aa5d3079f421) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1a98c869dba93f59a82e54eeb36a4215') in 0.056148 seconds
+  Import took 0.070786 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000432 seconds.
+  path: Assets/BayatGames/SaveGameFree/PressKit/Unity Social Media Images - Facebook-01.png
+  artifactKey: Guid(4c8a4c4e1df1741438dfc1b70bb9dbf3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BayatGames/SaveGameFree/PressKit/Unity Social Media Images - Facebook-01.png using Guid(4c8a4c4e1df1741438dfc1b70bb9dbf3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '63f5cd9b2e4c03184869edc59d0d3619') in 0.059126 seconds
+  Import took 0.067692 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000579 seconds.
+  path: Assets/BayatGames/SaveGameFree/PressKit/Unity Package Key Images - Small-01.png
+  artifactKey: Guid(b6333aad48953834c910d18eb46d5fea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BayatGames/SaveGameFree/PressKit/Unity Package Key Images - Small-01.png using Guid(b6333aad48953834c910d18eb46d5fea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a57602d9eb1abb9bb2df48ab75d75d5b') in 0.036341 seconds
+  Import took 0.044706 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 11.127559 seconds.
+  path: Assets/Scenes/Escena_MenuLoginRegistro.unity
+  artifactKey: Guid(219bddfffcc55fa42b8450063164bbda) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Escena_MenuLoginRegistro.unity using Guid(219bddfffcc55fa42b8450063164bbda) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f4171353ca4a99db2d9f67aa61d4365a') in 0.005775 seconds
+  Import took 0.051635 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 137.202298 seconds.
+  path: Assets/Scenes/Escena_Register.unity
+  artifactKey: Guid(6e742f7104c9e824382b54c5f1c7bf08) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Escena_Register.unity using Guid(6e742f7104c9e824382b54c5f1c7bf08) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f5c371cd499ee8d59653174bcd619054') in 0.015160 seconds
+  Import took 0.068417 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 28.689470 seconds.
+  path: Assets/Scenes/Escena_Register.unity
+  artifactKey: Guid(6e742f7104c9e824382b54c5f1c7bf08) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Escena_Register.unity using Guid(6e742f7104c9e824382b54c5f1c7bf08) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd2fe49518757dc1793602f508aea86c4') in 0.006027 seconds
+  Import took 0.051333 seconds .
+
+AssetImportWorkerClient::OnTransportError - code=2 error=End of file
