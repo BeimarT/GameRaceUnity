@@ -193,7 +193,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Back to menu
+  m_Text: "Volver al men\xFA"
 --- !u!222 &412238972
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -347,7 +347,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Replay
+  m_Text: Repetir
 --- !u!222 &462943530
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -392,7 +392,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5192709, y: 0.5}
   m_AnchorMax: {x: 0.5192709, y: 0.5}
-  m_AnchoredPosition: {x: 0.0000088215, y: 87.74942}
+  m_AnchoredPosition: {x: 0.000008821487, y: 87.74942}
   m_SizeDelta: {x: 161.3601, y: 63.3611}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &476088040
@@ -776,7 +776,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.1981132, g: 0.18017088, b: 0.18017088, a: 0.09803922}
+  m_BackGroundColor: {r: 0.10980392, g: 0.10980392, b: 0.11372549, a: 0.09803922}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0

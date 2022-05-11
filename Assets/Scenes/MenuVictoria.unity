@@ -1009,7 +1009,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.1981132, g: 0.18017088, b: 0.18017088, a: 0.09803922}
+  m_BackGroundColor: {r: 0.10980392, g: 0.10980392, b: 0.11372549, a: 0.09803922}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -1344,7 +1344,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Replay
+  m_Text: Repetir
 --- !u!222 &1694411500
 CanvasRenderer:
   m_ObjectHideFlags: 0
