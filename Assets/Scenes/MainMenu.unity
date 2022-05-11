@@ -1489,7 +1489,7 @@ GameObject:
   - component: {fileID: 726231343}
   - component: {fileID: 726231342}
   m_Layer: 5
-  m_Name: MejorVuelta
+  m_Name: Time
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1512,8 +1512,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5192709, y: 0.5}
   m_AnchorMax: {x: 0.5192709, y: 0.5}
-  m_AnchoredPosition: {x: -223, y: -52}
-  m_SizeDelta: {x: 203.6698, y: 40.764}
+  m_AnchoredPosition: {x: 9.4989, y: -65.66402}
+  m_SizeDelta: {x: 668.67, y: 68.092}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &726231342
 MonoBehaviour:
@@ -2373,6 +2373,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerDisplay: {fileID: 2003485602}
+  bestTime: {fileID: 1496372084}
 --- !u!1 &1110542494
 GameObject:
   m_ObjectHideFlags: 0
@@ -3149,13 +3150,13 @@ MonoBehaviour:
     m_BestFit: 0
     m_MinSize: 0
     m_MaxSize: 300
-    m_Alignment: 1
+    m_Alignment: 0
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Mejor vuelta: \n"
+  m_Text: 
 --- !u!222 &1496372085
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3700,6 +3701,7 @@ GameObject:
   - component: {fileID: 1988228921}
   - component: {fileID: 1988228922}
   - component: {fileID: 1988228923}
+  - component: {fileID: 1988228924}
   m_Layer: 5
   m_Name: Menu
   m_TagString: Untagged
@@ -3913,6 +3915,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pauseMenuUI: {fileID: 0}
   repeat: 0
+--- !u!114 &1988228924
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1988228916}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b88b8c848ece194f859a44ab257e225, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2003485600
 GameObject:
   m_ObjectHideFlags: 0

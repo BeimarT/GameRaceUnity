@@ -49,11 +49,11 @@ public class TextSync : MonoBehaviour
 
         WWWForm form = new WWWForm();
         Debug.Log(ContadorVueltas.map);
-        form.AddField("user", LoginBBDD.username.ToString());
+        form.AddField("user", LoginBBDD.id.ToString());
         form.AddField("time", bestLap.ToString());
         form.AddField("map", ContadorVueltas.map.ToString());
 
-        UnityWebRequest www = UnityWebRequest.Post("http://127.0.0.1:8000/api/record" , form);
+        UnityWebRequest www = UnityWebRequest.Post("https://apribrumbrummongo.herokuapp.com/api/timelap" , form);
         yield return www.SendWebRequest();
             if(www.result != UnityWebRequest.Result.Success)
             {

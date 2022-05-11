@@ -40,7 +40,7 @@ public class LoginBBDD : MonoBehaviour
                 Debug.Log("Login succesfull");
                 Debug.Log(www.downloadHandler.text);
                 JsonData jsondata = JsonMapper.ToObject(www.downloadHandler.text);
-                // id = (int) jsondata["User"];
+                id = (int) jsondata["User"];
                 username = (string) jsondata["body"]["username"];
                 SceneManager.LoadScene("MainMenu");
             }
