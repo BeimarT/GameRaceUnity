@@ -18,7 +18,7 @@ public class ApiBestLap : MonoBehaviour
     public List<double> resultados = new List<double>();
 
     // public double [] resultados = new double [4];
-    public static double min;
+    public static string min;
     public void Start ()
     {
         StartCoroutine(apiBestLap());
@@ -29,6 +29,7 @@ public class ApiBestLap : MonoBehaviour
 
         UnityWebRequest www = UnityWebRequest.Get($"https://apribrumbrummongo.herokuapp.com/api/timelap/{LoginBBDD.id}");
         yield return www.SendWebRequest();
+
             if(www.result != UnityWebRequest.Result.Success)
             {
                 Debug.Log(www.error);
@@ -36,18 +37,24 @@ public class ApiBestLap : MonoBehaviour
             } else {
                 Debug.Log("Getting best lap succesfull");
                 Debug.Log(www.downloadHandler.text);
-                JsonData jsondata = JsonMapper.ToObject(www.downloadHandler.text);
-                Debug.Log(jsondata.Count);   
-
-                for (int i = 0; i < jsondata.Count; i++)
-                {
-                    time = (string) jsondata [i]["time"];
-                    // resultados[i] = double.Parse(time);
-                    resultados.Add(double.Parse(time));
-                    Debug.Log("resultado" + resultados[i]);
+                try{
+                    JsonData jsondata = JsonMapper.ToObject(www.downloadHandler.text);
+                    min = (string) jsondata [0]["time"];
+                } catch (Exception e){
+                    min = "0";
                 }
-                min = resultados.Min();
-                Debug.Log("Este es el minimo" + resultados.Min());
+                Debug.Log(min);
+                // Debug.Log(jsondata.Count);   
+
+                // for (int i = 0; i < jsondata.Count; i++)
+                // {
+                //     time = (string) jsondata [i]["time"];
+                //     resultados.Add(double.Parse(time));
+                //     Debug.Log("resultado" + resultados[i]);
+                // }
+                // min = resultados.Min();
+                // Debug.Log("Este es el minimo" + resultados.Min());
             }
     }
+
 }
