@@ -34,12 +34,7 @@ public class LoginBBDD : MonoBehaviour
             if(www.result != UnityWebRequest.Result.Success)
             {
                 Debug.Log(www.error);
-<<<<<<< HEAD
-                Debug.Log("Credentials incorrectos");
-=======
                 incorrectCredentials.text = "Credenciales incorrectas";
-
->>>>>>> Beimar
             } else {
 
                 Debug.Log("Login succesfull");
