@@ -15,7 +15,7 @@ public class ApiBestLap : MonoBehaviour
 {
 
     public static string time;
-    public List<double> resultados = new List<double>();
+    // public List<double> resultados = new List<double>();
 
     // public double [] resultados = new double [4];
     public static string min;
@@ -40,6 +40,7 @@ public class ApiBestLap : MonoBehaviour
                 try{
                     JsonData jsondata = JsonMapper.ToObject(www.downloadHandler.text);
                     min = (string) jsondata [0]["time"];
+                    min = min.Substring(0, 5);
                 } catch (Exception e){
                     min = "0";
                 }
