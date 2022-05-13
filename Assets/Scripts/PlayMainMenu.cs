@@ -48,14 +48,15 @@ public class PlayMainMenu : MonoBehaviour
             }
         }
     }
-    public void PlayGame_Ciudad()
+
+    public void PlayGame_Ciudad_Before()
     {
         if (multiplayer){
             Time.timeScale = 1;
             SceneManager.LoadScene("Escena_Ciudad_DoublePlayer");
         } else {
             Time.timeScale = 1;
-            SceneManager.LoadScene("Escena_Ciudad");
+            SceneManager.LoadScene("CargarPartida");
         }
     }
     public void PlayGame_Tutorial()

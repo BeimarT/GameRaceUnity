@@ -41,15 +41,16 @@ public class CarSteering_2ndplayer : MonoBehaviour {
 		spriteRenderer.sprite = spriteArray[PlayMainMenu.flag + 1];
 		if (GameSelector.multiplayer ==  true){
 		} else {
-			if (SaveGame.Exists(LoginBBDD.username +  SceneManager.GetActiveScene().name)){
-				Debug.Log("entra en carsteering");
-				PlayerData player = SaveGame.Load<PlayerData>(LoginBBDD.username + SceneManager.GetActiveScene().name);
-				rb.position = new Vector2(player.positionx, player.positiony);	
-				rb.rotation = player.rotation;
+			if (GameSelector.cargar == false){
+				} else {
+					if (SaveGame.Exists(LoginBBDD.username +  SceneManager.GetActiveScene().name)){
+					PlayerData player = SaveGame.Load<PlayerData>(LoginBBDD.username + SceneManager.GetActiveScene().name);
+					rb.position = new Vector2(player.positionx, player.positiony);	
+					rb.rotation = player.rotation;
+				}
 			}
 		}
 	}
-	
 	// Update is called once per frame
 	void FixedUpdate () {
 		if(Input.GetKey(your_key3) == true || Input.GetKey(your_key4) == true){

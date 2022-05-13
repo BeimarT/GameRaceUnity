@@ -59,7 +59,8 @@ public class ContadorVueltas: MonoBehaviour
                 checkpoint1 = false;
                 checkpoint2 = false;
         } else {
-            if (SaveGame.Exists(LoginBBDD.username + SceneManager.GetActiveScene().name)){
+            Debug.Log(GameSelector.cargar);
+            if (SaveGame.Exists(LoginBBDD.username + SceneManager.GetActiveScene().name) && GameSelector.cargar == true){
                 map = SceneManager.GetActiveScene().name;
                 timer = SaveGame.Load<PlayerData>(LoginBBDD.username + SceneManager.GetActiveScene().name).timer; 
                 vuelta = SaveGame.Load<PlayerData>(LoginBBDD.username + SceneManager.GetActiveScene().name).vueltas;
@@ -72,6 +73,7 @@ public class ContadorVueltas: MonoBehaviour
                 Debug.Log(map);
                 timer = 0;  //seteamos tiempo y vuelta en 0
                 vuelta = 0;
+                counterTimerResultant = 100;
                 startTimer = true;
                 checkpoint1 = false;
                 checkpoint2 = false;
