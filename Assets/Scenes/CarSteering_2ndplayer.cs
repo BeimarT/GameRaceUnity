@@ -43,8 +43,8 @@ public class CarSteering_2ndplayer : MonoBehaviour {
 		} else {
 			if (GameSelector.cargar == false){
 				} else {
-					if (SaveGame.Exists(LoginBBDD.username +  SceneManager.GetActiveScene().name)){
-					PlayerData player = SaveGame.Load<PlayerData>(LoginBBDD.username + SceneManager.GetActiveScene().name);
+					if (SaveGame.Exists(LoginBBDD.username +  SceneManager.GetActiveScene().name + GameSelector.partida)){
+					PlayerData player = SaveGame.Load<PlayerData>(LoginBBDD.username + SceneManager.GetActiveScene().name + GameSelector.partida);
 					rb.position = new Vector2(player.positionx, player.positiony);	
 					rb.rotation = player.rotation;
 				}

@@ -1567,7 +1567,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1381825617}
+      - m_Target: {fileID: 1381825616}
         m_TargetAssemblyTypeName: GameSelector, Assembly-CSharp
         m_MethodName: PlayGame_Monaco_SinglePlayer
         m_Mode: 1

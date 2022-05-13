@@ -57,7 +57,7 @@ public class PauseMenu : MonoBehaviour
         data.rotation = CarSteering_2ndplayer.rotation;
         data.counterTimerResultant = ContadorVueltas.counterTimerResultant;
         Debug.Log(data.counterTimerResultant);
-        SaveGame.Save<PlayerData>(LoginBBDD.username + SceneManager.GetActiveScene().name, data);
+        SaveGame.Save<PlayerData>(LoginBBDD.username + SceneManager.GetActiveScene().name + GameSelector.partida, data);
         SceneManager.LoadScene("MainMenu");
     }
 }

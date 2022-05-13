@@ -60,14 +60,14 @@ public class ContadorVueltas: MonoBehaviour
                 checkpoint2 = false;
         } else {
             Debug.Log(GameSelector.cargar);
-            if (SaveGame.Exists(LoginBBDD.username + SceneManager.GetActiveScene().name) && GameSelector.cargar == true){
+            if (SaveGame.Exists(LoginBBDD.username + SceneManager.GetActiveScene().name + GameSelector.partida) && GameSelector.cargar == true){
                 map = SceneManager.GetActiveScene().name;
-                timer = SaveGame.Load<PlayerData>(LoginBBDD.username + SceneManager.GetActiveScene().name).timer; 
-                vuelta = SaveGame.Load<PlayerData>(LoginBBDD.username + SceneManager.GetActiveScene().name).vueltas;
+                timer = SaveGame.Load<PlayerData>(LoginBBDD.username + SceneManager.GetActiveScene().name + GameSelector.partida).timer; 
+                vuelta = SaveGame.Load<PlayerData>(LoginBBDD.username + SceneManager.GetActiveScene().name + GameSelector.partida).vueltas;
                 startTimer = true;
-                checkpoint1 = SaveGame.Load<PlayerData>(LoginBBDD.username + SceneManager.GetActiveScene().name).checkpoint1;
-                checkpoint2 = SaveGame.Load<PlayerData>(LoginBBDD.username + SceneManager.GetActiveScene().name).checkpoint2;
-                counterTimerResultant = SaveGame.Load<PlayerData>(LoginBBDD.username + SceneManager.GetActiveScene().name).counterTimerResultant;
+                checkpoint1 = SaveGame.Load<PlayerData>(LoginBBDD.username + SceneManager.GetActiveScene().name + GameSelector.partida).checkpoint1;
+                checkpoint2 = SaveGame.Load<PlayerData>(LoginBBDD.username + SceneManager.GetActiveScene().name + GameSelector.partida).checkpoint2;
+                counterTimerResultant = SaveGame.Load<PlayerData>(LoginBBDD.username + SceneManager.GetActiveScene().name + GameSelector.partida).counterTimerResultant;
             } else {
                 map = SceneManager.GetActiveScene().name;
                 Debug.Log(map);

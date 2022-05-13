@@ -13,6 +13,7 @@ public class PlayMainMenu : MonoBehaviour
     public int repeat = 0;
     public static int flag2 = 0;
     bool multiplayer = GameSelector.multiplayer;
+    public static int partida;
     public void goToTutorial(){
         Time.timeScale = 1;
         SceneManager.LoadScene("Escena_Tutorial");
@@ -22,6 +23,12 @@ public class PlayMainMenu : MonoBehaviour
     }
     public void MenuSelector_Ciudad(){
         SceneManager.LoadScene("MenuSelectorJuego_Ciudad");
+    }
+    public void MenuCargadorPartidas_Ciudad(){
+        SceneManager.LoadScene("CargarPartidaSeleccionCiudad");
+    }
+        public void MenuCargadorPartidas_Monaco(){
+        SceneManager.LoadScene("CargarPartidaSeleccionMonaco");
     }
     public void goToMainMenu(){
         SceneManager.LoadScene("MainMenu");

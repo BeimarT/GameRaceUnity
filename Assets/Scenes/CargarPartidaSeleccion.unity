@@ -675,7 +675,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Cargar Partida
+  m_Text: Partida 2
 --- !u!222 &1211226694
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -770,7 +770,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1343135058}
         m_TargetAssemblyTypeName: GameSelector, Assembly-CSharp
-        m_MethodName: NoNuevaPartida
+        m_MethodName: partida1
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1137,7 +1137,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1954394387}
         m_TargetAssemblyTypeName: GameSelector, Assembly-CSharp
-        m_MethodName: NuevaPartida
+        m_MethodName: partida2
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1267,7 +1267,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Nueva Partida
+  m_Text: Partida 1
 --- !u!222 &1970629190
 CanvasRenderer:
   m_ObjectHideFlags: 0
