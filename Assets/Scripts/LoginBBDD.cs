@@ -16,7 +16,7 @@ public class LoginBBDD : MonoBehaviour
     public static int id;
 
     public static string username;
-
+    public Text incorrectCredentials;
     public Button submitButton;
 
     public void CallLogin()
@@ -34,13 +34,18 @@ public class LoginBBDD : MonoBehaviour
             if(www.result != UnityWebRequest.Result.Success)
             {
                 Debug.Log(www.error);
+<<<<<<< HEAD
                 Debug.Log("Credentials incorrectos");
+=======
+                incorrectCredentials.text = "Credenciales incorrectas";
+
+>>>>>>> Beimar
             } else {
 
                 Debug.Log("Login succesfull");
                 Debug.Log(www.downloadHandler.text);
                 JsonData jsondata = JsonMapper.ToObject(www.downloadHandler.text);
-                // id = (int) jsondata["User"];
+                id = (int) jsondata["User"];
                 username = (string) jsondata["body"]["username"];
                 Debug.Log(username);
                 SceneManager.LoadScene("MainMenu");

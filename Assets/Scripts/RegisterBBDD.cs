@@ -10,6 +10,7 @@ public class RegisterBBDD : MonoBehaviour
     public InputField nameField;
     public InputField passwordField;
     public Button submitButton;
+    public Text errorMessage;
 
     
 
@@ -42,6 +43,7 @@ public class RegisterBBDD : MonoBehaviour
             } else
             {
                 Debug.Log("Register succesfull");
+                errorMessage.text = "Usuario creado correctamente";
             }
         }
     }

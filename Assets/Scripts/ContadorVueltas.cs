@@ -10,7 +10,7 @@ using BayatGames.SaveGameFree;
 
 public class ContadorVueltas: MonoBehaviour
 {
-    	public class PlayerData{
+        public class PlayerData{
 		public float positiony;
         public float positionx;
 		public float timer;
@@ -26,7 +26,7 @@ public class ContadorVueltas: MonoBehaviour
     public static List<float> timerGuardado = new List<float>();
     public static string map;
     public string username = LoginBBDD.username;
-    private bool checkpoint1 = false; //Cuando estén en true se podrá contar la vuelta
+    private bool checkpoint1 = false; 
     private bool checkpoint2 = false;
     private bool checkpoint3 = false;  
     private bool checkpoint4 = false;  
@@ -178,8 +178,12 @@ public class ContadorVueltas: MonoBehaviour
             if (other.gameObject.name == "CheckPoint8")
             {
                 Debug.Log("CheckPoint8");
-                checkpoint8 = true;
-                callLogs();
+                if(checkpoint8 == false){
+                    Debug.Log("CheckPoint8");
+                    checkpoint8 = true;
+                    callLogs();
+                }
+
             }
     }
 
@@ -190,6 +194,7 @@ public class ContadorVueltas: MonoBehaviour
     IEnumerator apiLogs()
     {
         WWWForm form = new WWWForm();
+        form.AddField("user", LoginBBDD.id.ToString());
         form.AddField("checkPoint1", checkpoint1.ToString());
         form.AddField("checkPoint2", checkpoint2.ToString());
         form.AddField("checkPoint3", checkpoint3.ToString());
@@ -199,7 +204,7 @@ public class ContadorVueltas: MonoBehaviour
         form.AddField("checkPoint7", checkpoint7.ToString());
         form.AddField("checkPoint8", checkpoint8.ToString());
 
-        UnityWebRequest www = UnityWebRequest.Post("http://127.0.0.1:8000/api/logs" , form);
+        UnityWebRequest www = UnityWebRequest.Post("https://apribrumbrummongo.herokuapp.com/api/logs" , form);
         yield return www.SendWebRequest();
             if(www.result != UnityWebRequest.Result.Success)
             {
