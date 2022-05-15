@@ -43,6 +43,7 @@ public class ApiBestLap : MonoBehaviour
                     min = min.Substring(0, 5);
                 } catch (Exception e){
                     min = "0";
+                    Debug.Log(e);
                 }
                 Debug.Log(min);
                 // Debug.Log(jsondata.Count);   

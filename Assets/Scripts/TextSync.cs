@@ -5,8 +5,9 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using TMPro;
-
-
+using System.Net.Http;
+using Newtonsoft.Json;
+using System.Threading.Tasks;
 
 
 public class TextSync : MonoBehaviour
@@ -14,8 +15,13 @@ public class TextSync : MonoBehaviour
     public Text textoACambiar;
     public List<float> timerGuardado = new List<float>();
     public string tiempoencontrado = "";
-    float bestLap = 12000;
+    public static double bestLap = 1200.2000;
 
+    public class Vuelta {
+        public int user{get; set;}
+        public double time{get; set;}
+        public string map {get; set;}
+    }
     // Start is called before the first frame update
     void Start()
     {
@@ -28,11 +34,38 @@ public class TextSync : MonoBehaviour
             if(totalTimes[i] < bestLap){
                 bestLap = totalTimes[i];
             }
-        }        
+        }
         textoACambiar.text = bestLap.ToString();
-        saveBestLapMongoDB();
+        GetVuelta();
+        // saveBestLapMongoDB();
     }
-    
+    public static async Task<Vuelta> GetVuelta()
+    {
+        string url = "https://apribrumbrummongo.herokuapp.com/api/timelap";
+        Vuelta vuelta = new Vuelta()
+        {
+            user = LoginBBDD.id,
+            time = TextSync.bestLap,
+            map = ContadorVueltas.map
+        };
+
+        HttpClient client = new HttpClient();
+
+        var data = JsonConvert.SerializeObject(vuelta);
+
+        HttpContent content = new StringContent(data, System.Text.Encoding.UTF8, "application/json");
+
+        HttpResponseMessage response = await client.PostAsync(url, content);
+
+        if (response.IsSuccessStatusCode)
+        {
+            Debug.Log("Best lap saved");
+            Debug.Log("Intento de http" + response);
+        }
+
+        return vuelta;
+        Debug.Log(vuelta);
+    }
 
     // Update is called once per frame
     // void Update()
